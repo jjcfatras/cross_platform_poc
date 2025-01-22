@@ -1,4 +1,5 @@
 const nx = require("@nx/eslint-plugin");
+const eslintConfigPrettier = require("eslint-config-prettier");
 const perfectionist = require("eslint-plugin-perfectionist");
 
 module.exports = [
@@ -6,6 +7,8 @@ module.exports = [
   ...nx.configs["flat/typescript"],
   ...nx.configs["flat/javascript"],
   perfectionist.configs["recommended-natural"],
+  eslintConfigPrettier,
+
   {
     ignores: ["**/dist"],
   },

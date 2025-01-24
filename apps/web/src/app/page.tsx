@@ -1,6 +1,13 @@
+"use client";
+import "~/libs/ui/theming/unistyles";
+
+import { Text } from "react-native";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
+
 import styles from "./page.module.css";
 
 export default function Index() {
+  const { styles: _styles } = useStyles(styleSheet);
   /*
    * Replace the elements below with your own.
    *
@@ -16,7 +23,7 @@ export default function Index() {
               Welcome web 👋
             </h1>
           </div>
-
+          <Text style={_styles["test"]}>Hello World</Text>
           <div className="rounded" id="hero">
             <div className="text-container">
               <h2>
@@ -467,3 +474,10 @@ export default function Index() {
     </div>
   );
 }
+
+const styleSheet = createStyleSheet((theme) => ({
+  test: {
+    color: theme.colors.typography,
+    fontSize: theme.fontSizing[4],
+  },
+}));

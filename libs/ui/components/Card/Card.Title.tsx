@@ -1,9 +1,9 @@
 import { Text, type TextProps } from "../Text";
 
-export const CardTitle = ({ children, ...rest }: TextProps) => {
-  return (
-    <Text type="h2" {...rest}>
-      {children}
-    </Text>
-  );
-};
+type CardSubTitleProps = Omit<TextProps, "color" | "type">;
+
+export const CardTitle = ({ children, ...rest }: CardSubTitleProps) => (
+  <Text type="h1" {...rest}>
+    {children}
+  </Text>
+);

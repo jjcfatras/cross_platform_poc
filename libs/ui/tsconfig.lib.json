@@ -19,5 +19,10 @@
     "src/**/*.spec.jsx",
     "src/**/*.test.jsx"
   ],
-  "include": ["theming/**/*.ts", "theming/**/*.tsx"]
+  "include": [
+    "theming/**/*.ts",
+    "theming/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx"
+  ]
 }

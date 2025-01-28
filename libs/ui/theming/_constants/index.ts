@@ -7,6 +7,8 @@ export const breakpoints = {
 } as const;
 
 export const palette = {
+  accent30: "hsl(265, 100%, 30%)",
+  accent80: "hsl(265, 100%, 80%)",
   base0: "hsl(0, 0%, 0%)",
   base20: "hsl(0, 0%, 20%)",
   base40: "hsl(0, 0%, 40%)",

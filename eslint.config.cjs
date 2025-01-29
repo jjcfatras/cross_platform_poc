@@ -4,14 +4,30 @@ const eslintConfigPrettier = require("eslint-config-prettier");
 const perfectionist = require("eslint-plugin-perfectionist");
 const tsEslint = require("typescript-eslint");
 
-module.exports = [
+module.exports = tsEslint.config(
   ...nx.configs["flat/base"],
   ...nx.configs["flat/typescript"],
   ...nx.configs["flat/javascript"],
   eslint.configs.recommended,
-  ...tsEslint.configs.strict,
+  ...tsEslint.configs.recommendedTypeChecked,
   perfectionist.configs["recommended-natural"],
   eslintConfigPrettier,
+  {
+    languageOptions: {
+      parserOptions: {
+        project: [
+          "./tsconfig.base.json",
+          "./libs/*/tsconfig.lib.json",
+          "./apps/*/tsconfig.app.json",
+        ],
+        tsconfigRootDir: __dirname,
+      },
+    },
+  },
+  {
+    extends: [tsEslint.configs.disableTypeChecked],
+    files: ["**/*.{js,cjs,mjs}"],
+  },
   {
     rules: {
       "@typescript-eslint/no-require-imports": [
@@ -78,4 +94,4 @@ module.exports = [
     // Override or add rules here
     rules: {},
   },
-];
+);

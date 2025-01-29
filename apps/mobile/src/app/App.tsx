@@ -84,8 +84,8 @@ export const App = () => {
               </Text>
               <TouchableOpacity
                 onPress={() =>
-                  Linking.openURL(
-                    "https://nx.dev/getting-started/intro?utm_source=nx-project"
+                  void Linking.openURL(
+                    "https://nx.dev/getting-started/intro?utm_source=nx-project",
                   )
                 }
                 style={[styles.listItem, styles.learning]}
@@ -127,7 +127,9 @@ export const App = () => {
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() =>
-                  Linking.openURL("https://nx.dev/blog/?utm_source=nx-project")
+                  void Linking.openURL(
+                    "https://nx.dev/blog/?utm_source=nx-project",
+                  )
                 }
                 style={[styles.listItem, styles.learning]}
               >
@@ -168,8 +170,8 @@ export const App = () => {
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() =>
-                  Linking.openURL(
-                    "https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project"
+                  void Linking.openURL(
+                    "https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project",
                   )
                 }
                 style={[styles.listItem, styles.learning]}
@@ -200,8 +202,8 @@ export const App = () => {
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() =>
-                  Linking.openURL(
-                    "https://nx.dev/nx-api/expo/documents/overview"
+                  void Linking.openURL(
+                    "https://nx.dev/nx-api/expo/documents/overview",
                   )
                 }
                 style={[styles.listItem, styles.learning]}
@@ -246,7 +248,9 @@ export const App = () => {
           <View style={styles.section}>
             <TouchableOpacity
               onPress={() =>
-                Linking.openURL("https://nx.dev/nx-cloud?utm_source=nx-project")
+                void Linking.openURL(
+                  "https://nx.dev/nx-cloud?utm_source=nx-project",
+                )
               }
             >
               <View style={[styles.listItem, styles.shadowBox]}>
@@ -273,8 +277,8 @@ export const App = () => {
           <View style={[styles.section, styles.shadowBox]}>
             <TouchableOpacity
               onPress={() =>
-                Linking.openURL(
-                  "https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console&utm_source=nx-project"
+                void Linking.openURL(
+                  "https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console&utm_source=nx-project",
                 )
               }
             >
@@ -308,8 +312,8 @@ export const App = () => {
           <View style={[styles.section, styles.shadowBox]}>
             <TouchableOpacity
               onPress={() =>
-                Linking.openURL(
-                  "https://plugins.jetbrains.com/plugin/21060-nx-console"
+                void Linking.openURL(
+                  "https://plugins.jetbrains.com/plugin/21060-nx-console",
                 )
               }
             >
@@ -387,9 +391,11 @@ export const App = () => {
                 </Text>
               </View>
               <TouchableOpacity
-                onPress={() => {
-                  Linking.openURL("https://cloud.nx.app/connect/jqsQdSPaAQ");
-                }}
+                onPress={() =>
+                  void Linking.openURL(
+                    "https://cloud.nx.app/connect/jqsQdSPaAQ",
+                  )
+                }
                 style={styles.connectToCloudButton}
               >
                 <Text

@@ -16,5 +16,6 @@ export const Flex = ({ children, ...rest }: FlexProps) => {
 const styleSheet = createStyleSheet({
   flex: {
     flex: 1,
+    flexDirection: "column",
   },
 });

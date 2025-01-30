@@ -17,6 +17,7 @@ const styles = StyleSheet.create((theme) => ({
     borderWidth: 2,
     flex: 1,
     width: "100%",
+    backgroundColor: "transparent",
     maxWidth: {
       // [mq.only.width("xs", "sm")]: "100%",
       [mq.only.width("sm", "md")]: 540,

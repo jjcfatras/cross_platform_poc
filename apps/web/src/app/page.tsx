@@ -1,11 +1,11 @@
 "use client";
 import "~/libs/ui/theming/unistyles";
 
-import { Card, Container, Flex, Header, Text } from "~/libs/ui/components";
+import { Card, Container, Header, Screen, Text } from "~/libs/ui/components";
 
 export default function Index() {
   return (
-    <Flex>
+    <Screen>
       <Container>
         <Header />
         <Card>
@@ -33,6 +33,6 @@ export default function Index() {
           </Card.Body>
         </Card>
       </Container>
-    </Flex>
+    </Screen>
   );
 }

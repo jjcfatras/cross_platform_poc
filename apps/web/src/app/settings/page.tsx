@@ -1,11 +1,11 @@
-import { Container, Flex, Text } from "~/libs/ui/components";
+import { Container, Screen, Text } from "~/libs/ui/components";
 
 const SettingsPage = () => (
-  <Flex>
+  <Screen>
     <Container>
       <Text>Settings</Text>
     </Container>
-  </Flex>
+  </Screen>
 );
 
 export default SettingsPage;

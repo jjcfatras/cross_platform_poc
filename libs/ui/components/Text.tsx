@@ -7,11 +7,11 @@ import {
 
 export type TextProps = RNTextProps & UnistylesVariants<typeof styleSheet>;
 
-export const Text = ({ children, color, type, ...rest }: TextProps) => {
+export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
   const { styles } = useStyles(styleSheet, { color, type });
 
   return (
-    <RNText style={styles.text} {...rest}>
+    <RNText style={[styles.text, style]} {...rest}>
       {children}
     </RNText>
   );

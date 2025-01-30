@@ -9,7 +9,7 @@ module.exports = tsEslint.config(
   ...nx.configs["flat/typescript"],
   ...nx.configs["flat/javascript"],
   eslint.configs.recommended,
-  ...tsEslint.configs.recommendedTypeChecked,
+  ...tsEslint.configs.strict,
   perfectionist.configs["recommended-natural"],
   eslintConfigPrettier,
   {

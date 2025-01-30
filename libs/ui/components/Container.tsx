@@ -1,20 +1,16 @@
 /* eslint-disable perfectionist/sort-objects */
 import { View, type ViewProps } from "react-native";
-import { createStyleSheet, mq, useStyles } from "react-native-unistyles";
+import { mq, StyleSheet } from "react-native-unistyles";
 
 type ContainerProps = ViewProps;
 
-export const Container = ({ children, ...rest }: ContainerProps) => {
-  const { styles } = useStyles(styleSheet);
+export const Container = ({ children, ...rest }: ContainerProps) => (
+  <View style={styles.container} {...rest}>
+    {children}
+  </View>
+);
 
-  return (
-    <View style={styles.container} {...rest}>
-      {children}
-    </View>
-  );
-};
-
-const styleSheet = createStyleSheet((theme) => ({
+const styles = StyleSheet.create((theme) => ({
   container: {
     alignSelf: "center",
     borderColor: theme.colors.good,

@@ -1,15 +1,10 @@
 import { Text as RNText, type TextProps as RNTextProps } from "react-native";
-import {
-  createStyleSheet,
-  type UnistylesVariants,
-  useStyles,
-} from "react-native-unistyles";
+import { StyleSheet, type UnistylesVariants } from "react-native-unistyles";
 
-export type TextProps = RNTextProps & UnistylesVariants<typeof styleSheet>;
+export type TextProps = RNTextProps & UnistylesVariants<typeof styles>;
 
 export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
-  const { styles } = useStyles(styleSheet, { color, type });
-
+  styles.useVariants({ color, type });
   return (
     <RNText style={[styles.text, style]} {...rest}>
       {children}
@@ -17,7 +12,7 @@ export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
   );
 };
 
-const styleSheet = createStyleSheet((theme) => ({
+const styles = StyleSheet.create((theme) => ({
   text: {
     variants: {
       color: {

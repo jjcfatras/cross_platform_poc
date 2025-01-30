@@ -1,17 +1,13 @@
 import { View, type ViewProps } from "react-native";
-import { createStyleSheet, useStyles } from "react-native-unistyles";
+import { StyleSheet } from "react-native-unistyles";
 
-export const CardBody = ({ children, ...rest }: ViewProps) => {
-  const { styles } = useStyles(styleSheet);
+export const CardBody = ({ children, ...rest }: ViewProps) => (
+  <View style={styles.body} {...rest}>
+    {children}
+  </View>
+);
 
-  return (
-    <View style={styles.body} {...rest}>
-      {children}
-    </View>
-  );
-};
-
-const styleSheet = createStyleSheet((theme) => ({
+const styles = StyleSheet.create((theme) => ({
   body: {
     padding: theme.spacing[1],
   },

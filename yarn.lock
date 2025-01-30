@@ -2268,9 +2268,11 @@ __metadata:
     react-dom: "npm:~18.3.1"
     react-icons: "npm:^5.4.0"
     react-native: "npm:0.76.3"
+    react-native-edge-to-edge: "npm:^1.4.3"
+    react-native-nitro-modules: "npm:^0.21.0"
     react-native-svg: "npm:~15.8.0"
     react-native-svg-transformer: "npm:~1.5.0"
-    react-native-unistyles: "npm:^2.20.0"
+    react-native-unistyles: "npm:3.0.0-beta.5"
     react-native-web: "npm:~0.19.13"
     react-test-renderer: "npm:~18.3.1"
     ts-jest: "npm:^29.1.0"
@@ -15315,6 +15317,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-edge-to-edge@npm:^1.4.3":
+  version: 1.4.3
+  resolution: "react-native-edge-to-edge@npm:1.4.3"
+  peerDependencies:
+    react: ">=18.2.0"
+    react-native: ">=0.74.0"
+  checksum: 10c0/a73956604b2f0cd8de493295b556258c8c4d39bca040fa513ad441f460e80f9501a0c7840a5cf99453740c1b0c10b305fdd86fdb0a8eb57ff7bf61109532787d
+  languageName: node
+  linkType: hard
+
+"react-native-nitro-modules@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "react-native-nitro-modules@npm:0.21.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/ae1443a7fb3166fd7467f5d9852ff3fa69a64b032bb4d3a25364e8a109afb19242b9ccaca1550a726fb82774199302f90ea4d6a3dd142ac05ecd667e2ede7669
+  languageName: node
+  linkType: hard
+
 "react-native-svg-transformer@npm:~1.5.0":
   version: 1.5.0
   resolution: "react-native-svg-transformer@npm:1.5.0"
@@ -15344,24 +15366,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-unistyles@npm:^2.20.0":
-  version: 2.20.0
-  resolution: "react-native-unistyles@npm:2.20.0"
+"react-native-unistyles@npm:3.0.0-beta.5":
+  version: 3.0.0-beta.5
+  resolution: "react-native-unistyles@npm:3.0.0-beta.5"
   peerDependencies:
     "@react-native/normalize-colors": "*"
     react: "*"
-    react-native: "*"
-    react-native-macos: "*"
-    react-native-web: "*"
-    react-native-windows: "*"
-  peerDependenciesMeta:
-    react-native-macos:
-      optional: true
-    react-native-web:
-      optional: true
-    react-native-windows:
-      optional: true
-  checksum: 10c0/54f383c56b3030c3581def720ac5a23de377c99837c3e11b3dee75e1cc7b1caf3fc9e60f77763f8d6c7188797af6bc97dbcbd23799db88fc1806117d1f807557
+    react-native: ">=0.76.0"
+    react-native-edge-to-edge: "*"
+    react-native-nitro-modules: "*"
+  checksum: 10c0/ac70543a75d40d61a5a10c85bf7de0680d8016c466cce3920f8c152710932b456718fed39f8bc7115f033d4930d1780a4a331a56ffc2eb97f9f9c3561539358d
   languageName: node
   linkType: hard
 

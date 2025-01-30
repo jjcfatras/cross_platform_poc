@@ -1,19 +1,15 @@
 import { View, type ViewProps } from "react-native";
-import { createStyleSheet, useStyles } from "react-native-unistyles";
+import { StyleSheet } from "react-native-unistyles";
 
 type CardProps = ViewProps;
 
-export const CardBase = ({ children, ...rest }: CardProps) => {
-  const { styles } = useStyles(styleSheet);
+export const CardBase = ({ children, ...rest }: CardProps) => (
+  <View style={styles.card} {...rest}>
+    {children}
+  </View>
+);
 
-  return (
-    <View style={styles.card} {...rest}>
-      {children}
-    </View>
-  );
-};
-
-const styleSheet = createStyleSheet((theme) => ({
+const styles = StyleSheet.create((theme) => ({
   card: {
     alignItems: "center",
     backgroundColor: theme.colors.background,

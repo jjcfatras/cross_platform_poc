@@ -1,22 +1,19 @@
-import { IoMdMenu } from "react-icons/io";
+// import { IoMdMenu } from "react-icons/io";
 import { View } from "react-native";
-import { createStyleSheet, useStyles } from "react-native-unistyles";
+import { StyleSheet } from "react-native-unistyles";
 
 import { Text } from "./Text";
 
-export const Header = () => {
-  const { styles } = useStyles(styleSheet);
-  return (
-    <View style={styles.header}>
-      <Text style={styles.headerText} type="h1">
-        Demo
-      </Text>
-      <IoMdMenu style={styles.menuIcon} />
-    </View>
-  );
-};
+export const Header = () => (
+  <View style={styles.header}>
+    <Text style={styles.headerText} type="h1">
+      Demo
+    </Text>
+    {/* <IoMdMenu height={80} style={styles.menuIcon} width={80} /> */}
+  </View>
+);
 
-const styleSheet = createStyleSheet((theme) => ({
+const styles = StyleSheet.create((theme) => ({
   header: {
     alignItems: "center",
     backgroundColor: theme.colors.brand,
@@ -31,9 +28,7 @@ const styleSheet = createStyleSheet((theme) => ({
   },
   menuIcon: {
     color: theme.colors.white,
-    height: 80,
     position: "absolute",
     right: theme.spacing[4],
-    width: 80,
   },
 }));

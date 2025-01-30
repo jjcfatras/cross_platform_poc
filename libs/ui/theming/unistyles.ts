@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
 /* eslint-disable @typescript-eslint/no-empty-object-type */
-import { UnistylesRegistry } from "react-native-unistyles";
+import { StyleSheet } from "react-native-unistyles";
 
 import { breakpoints } from "./_constants";
 import { darkTheme, lightTheme } from "./themes";
@@ -20,14 +20,11 @@ declare module "react-native-unistyles" {
   export interface UnistylesThemes extends AppThemes {}
 }
 
-UnistylesRegistry.addBreakpoints(breakpoints)
-  .addThemes({
+StyleSheet.configure({
+  breakpoints,
+  settings: { initialTheme: "light" },
+  themes: {
     dark: darkTheme,
     light: lightTheme,
-    // register other themes with unique names
-  })
-  .addConfig({
-    // you can pass here optional config described below
-    // adaptiveThemes: true,
-    initialTheme: "light",
-  });
+  },
+});

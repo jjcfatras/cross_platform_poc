@@ -1,4 +1,5 @@
 import "~/libs/ui/theming/unistyles";
+import "./global.css";
 
 import { Style } from "~/libs/ui/theming";
 

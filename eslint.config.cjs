@@ -6,8 +6,8 @@ const tsEslint = require("typescript-eslint");
 
 module.exports = tsEslint.config(
   ...nx.configs["flat/base"],
-  ...nx.configs["flat/typescript"],
   ...nx.configs["flat/javascript"],
+  ...nx.configs["flat/typescript"],
   eslint.configs.recommended,
   ...tsEslint.configs.strict,
   perfectionist.configs["recommended-natural"],

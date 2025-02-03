@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
@@ -11,25 +10,35 @@ import { Text } from "./Text";
 // const LINKS = [{ destination: "/settings", label: "Settings" }];
 
 export const Header = () => {
-  const [, setIsPressed] = useState(false);
+  const [isPressed, setIsPressed] = useState(false);
 
   const _handlePress = () => setIsPressed((prevState) => !prevState);
 
   return (
-    <View style={styles.header}>
-      <Text style={styles.headerText} type="h1">
-        Demo
-      </Text>
-      <TouchableOpacity onPress={_handlePress} style={styles.menu}>
-        <View>
-          <Image alt="menu" height={100} src={Menu} width={100} />
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText} type="h1">
+          Demo
+        </Text>
+        <TouchableOpacity onPress={_handlePress} style={styles.menu}>
+          <View>
+            <Image alt="menu" height={100} src={Menu} width={100} />
+          </View>
+        </TouchableOpacity>
+      </View>
+      {isPressed && (
+        <View style={styles.subHeader}>
+          <Text style={styles.subHeaderText}>Test</Text>
         </View>
-      </TouchableOpacity>
+      )}
     </View>
   );
 };
 
 const styles = StyleSheet.create((theme) => ({
+  container: {
+    backgroundColor: theme.colors.brand,
+  },
   header: {
     alignItems: "center",
     backgroundColor: theme.colors.brand,
@@ -45,5 +54,13 @@ const styles = StyleSheet.create((theme) => ({
     height: 100,
     position: "absolute",
     right: theme.spacing[4],
+  },
+  subHeader: {
+    alignItems: "center",
+    flexDirection: "row",
+    height: 50,
+  },
+  subHeaderText: {
+    color: theme.colors.white,
   },
 }));

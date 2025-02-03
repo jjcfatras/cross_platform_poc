@@ -16,11 +16,17 @@ const styles = StyleSheet.create((theme) => ({
   text: {
     variants: {
       color: {
+        black: {
+          color: theme.colors.black,
+        },
         default: {
           color: theme.colors.textPrimary,
         },
         secondary: {
           color: theme.colors.textSecondary,
+        },
+        white: {
+          color: theme.colors.white,
         },
       },
       type: {

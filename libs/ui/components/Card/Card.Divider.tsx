@@ -6,7 +6,7 @@ export const CardDivider = () => <View style={styles.divider} />;
 const styles = StyleSheet.create((theme) => ({
   divider: {
     backgroundColor: theme.colors.divider,
-    height: 1,
+    height: StyleSheet.hairlineWidth,
     margin: theme.spacing[1],
     width: "100%",
   },

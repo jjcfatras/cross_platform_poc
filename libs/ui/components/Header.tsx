@@ -1,13 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
+import { TextLink } from "solito/link";
 
 import Menu from "../images/menu.svg";
 
 import { Text } from "./Text";
 
-// const LINKS = [{ destination: "/settings", label: "Settings" }];
+const LINKS = [{ destination: "/settings", label: "Settings" }];
 
 export const Header = () => {
   const [isPressed, setIsPressed] = useState(false);
@@ -17,7 +20,7 @@ export const Header = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText} type="h1">
+        <Text color="white" type="h1">
           Demo
         </Text>
         <TouchableOpacity onPress={_handlePress} style={styles.menu}>
@@ -28,7 +31,13 @@ export const Header = () => {
       </View>
       {isPressed && (
         <View style={styles.subHeader}>
-          <Text style={styles.subHeaderText}>Test</Text>
+          {LINKS.map((link, index) => (
+            <TextLink href={link.destination} key={index}>
+              <Text color="white" type="link">
+                {link.label}
+              </Text>
+            </TextLink>
+          ))}
         </View>
       )}
     </View>
@@ -41,13 +50,12 @@ const styles = StyleSheet.create((theme) => ({
   },
   header: {
     alignItems: "center",
-    backgroundColor: theme.colors.brand,
     flexDirection: "row",
     height: 100,
     justifyContent: "center",
     width: "100%",
   },
-  headerText: {
+  link: {
     color: theme.colors.white,
   },
   menu: {
@@ -59,8 +67,7 @@ const styles = StyleSheet.create((theme) => ({
     alignItems: "center",
     flexDirection: "row",
     height: 50,
+    justifyContent: "space-evenly",
   },
-  subHeaderText: {
-    color: theme.colors.white,
-  },
+  test: {},
 }));

@@ -49,6 +49,9 @@ const styles = StyleSheet.create((theme) => ({
           fontSize: theme.sizing[5],
           fontWeight: "bold",
         },
+        link: {
+          textDecorationLine: "underline",
+        },
       },
     },
   },

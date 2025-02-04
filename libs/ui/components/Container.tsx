@@ -4,8 +4,8 @@ import { mq, StyleSheet } from "react-native-unistyles";
 
 type ContainerProps = ViewProps;
 
-export const Container = ({ children, ...rest }: ContainerProps) => (
-  <View style={styles.container} {...rest}>
+export const Container = ({ children, style, ...rest }: ContainerProps) => (
+  <View style={[styles.container, style]} {...rest}>
     {children}
   </View>
 );

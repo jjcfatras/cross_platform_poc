@@ -1,13 +1,12 @@
 "use client";
 import "~/libs/ui/theming/unistyles";
 
-import { Card, Container, Header, Screen, Text } from "~/libs/ui/components";
+import { Card, Container, Screen, Text } from "~/libs/ui/components";
 
 export default function Index() {
   return (
     <Screen>
-      <Container>
-        <Header />
+      <Container hasHeader>
         <Card>
           <Card.Title>Hello World</Card.Title>
           <Card.SubTitle>Hello World</Card.SubTitle>

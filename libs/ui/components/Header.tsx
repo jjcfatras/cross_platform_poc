@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { StyleSheet, withUnistyles } from "react-native-unistyles";
 import { TextLink } from "solito/link";
 
 import Menu from "../images/menu.svg";
@@ -11,6 +11,8 @@ import Menu from "../images/menu.svg";
 import { Text } from "./Text";
 
 const LINKS = [{ destination: "/settings", label: "Settings" }];
+
+const UniLink = withUnistyles(TextLink);
 
 export const Header = () => {
   const [isPressed, setIsPressed] = useState(false);
@@ -24,19 +26,17 @@ export const Header = () => {
           Demo
         </Text>
         <TouchableOpacity onPress={_handlePress} style={styles.menu}>
-          <View>
-            <Image alt="menu" height={100} src={Menu} width={100} />
-          </View>
+          <Image alt="menu" fill src={Menu} />
         </TouchableOpacity>
       </View>
       {isPressed && (
         <View style={styles.subHeader}>
           {LINKS.map((link, index) => (
-            <TextLink href={link.destination} key={index}>
+            <UniLink href={link.destination} key={index}>
               <Text color="white" type="link">
                 {link.label}
               </Text>
-            </TextLink>
+            </UniLink>
           ))}
         </View>
       )}
@@ -47,6 +47,10 @@ export const Header = () => {
 const styles = StyleSheet.create((theme) => ({
   container: {
     backgroundColor: theme.colors.brand,
+    left: 0,
+    position: "absolute",
+    right: 0,
+    top: 0,
   },
   header: {
     alignItems: "center",
@@ -55,13 +59,11 @@ const styles = StyleSheet.create((theme) => ({
     justifyContent: "center",
     width: "100%",
   },
-  link: {
-    color: theme.colors.white,
-  },
   menu: {
     height: 100,
     position: "absolute",
     right: theme.spacing[4],
+    width: 100,
   },
   subHeader: {
     alignItems: "center",
@@ -69,5 +71,4 @@ const styles = StyleSheet.create((theme) => ({
     height: 50,
     justifyContent: "space-evenly",
   },
-  test: {},
 }));

@@ -1,13 +1,3 @@
-import { View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { Divider } from "../Divider";
 
-export const CardDivider = () => <View style={styles.divider} />;
-
-const styles = StyleSheet.create((theme) => ({
-  divider: {
-    backgroundColor: theme.colors.divider,
-    height: StyleSheet.hairlineWidth,
-    margin: theme.spacing[1],
-    width: "100%",
-  },
-}));
+export const CardDivider = () => <Divider />;

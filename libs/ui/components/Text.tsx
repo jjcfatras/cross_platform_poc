@@ -14,6 +14,7 @@ export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
 
 const styles = StyleSheet.create((theme) => ({
   text: {
+    fontSize: theme.sizing[4],
     variants: {
       color: {
         black: {

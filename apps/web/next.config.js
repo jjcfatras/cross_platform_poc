@@ -14,6 +14,7 @@ const nextConfig = {
   transpilePackages: [
     "react-native",
     "react-native-web",
+    "expo",
     "@expo/next-adapter/react-native",
     "solito",
   ],

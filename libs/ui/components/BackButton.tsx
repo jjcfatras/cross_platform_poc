@@ -1,22 +1,24 @@
 "use client";
-import Image from "next/image";
+
 import { TouchableOpacity, type TouchableOpacityProps } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { StyleSheet, withUnistyles } from "react-native-unistyles";
+import { SolitoImage } from "solito/image";
+import { useLink } from "solito/navigation";
 
 import BackArrow from "../images/back_arrow.svg";
+
+const UniImage = withUnistyles(SolitoImage);
 
 type BackButtonProps = TouchableOpacityProps;
 
 export const BackButton = ({ style, ...rest }: BackButtonProps) => {
-  const _handlePress = () => window.history.back();
+  const linkProps = useLink({
+    href: "/",
+  });
 
   return (
-    <TouchableOpacity
-      onPress={_handlePress}
-      style={[styles.button, style]}
-      {...rest}
-    >
-      <Image alt="back arrow" fill src={BackArrow} />
+    <TouchableOpacity style={[styles.button, style]} {...rest} {...linkProps}>
+      <UniImage alt="back arrow" fill src={BackArrow} />
     </TouchableOpacity>
   );
 };

@@ -34,7 +34,7 @@ const styles = StyleSheet.create((theme) => ({
       [mq.only.width("xl", "xxl")]: 1140,
       [mq.only.width("xxl")]: 1320,
     },
-    padding: theme.spacing[1],
-    paddingTop: hasHeader ? 100 : theme.spacing[1],
+    padding: theme.spacing[4],
+    paddingTop: hasHeader ? 100 : theme.spacing[4],
   }),
 }));

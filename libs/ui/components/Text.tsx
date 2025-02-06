@@ -14,6 +14,7 @@ export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
 
 const styles = StyleSheet.create((theme) => ({
   text: {
+    fontFamily: "Roboto",
     fontSize: theme.sizing[4],
     variants: {
       color: {
@@ -49,6 +50,9 @@ const styles = StyleSheet.create((theme) => ({
         h4: {
           fontSize: theme.sizing[5],
           fontWeight: "bold",
+        },
+        italic: {
+          fontFamily: "Roboto-Italic",
         },
         link: {
           textDecorationLine: "underline",

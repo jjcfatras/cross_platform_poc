@@ -1,4 +1,5 @@
 import "~/libs/ui/theming/unistyles";
+import "./fonts.css";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";

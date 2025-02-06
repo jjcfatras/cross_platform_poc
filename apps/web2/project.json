@@ -9,7 +9,7 @@
     "compile": {
       "executor": "nx:run-commands",
       "options": {
-        "cwd": "apps/web",
+        "cwd": "apps/web2",
         "commands": ["tsc -p tsconfig.json --noEmit"],
         "forwardAllArgs": false
       }

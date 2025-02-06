@@ -6,7 +6,7 @@ import { TouchableOpacity, View } from "react-native";
 import { StyleSheet, withUnistyles } from "react-native-unistyles";
 import { TextLink } from "solito/link";
 
-import Menu from "../images/menu.svg";
+import Menu from "~/libs/assets/src/svgs/menu.svg";
 
 import { Text } from "./Text";
 

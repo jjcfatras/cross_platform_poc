@@ -5,7 +5,7 @@ import { StyleSheet, withUnistyles } from "react-native-unistyles";
 import { SolitoImage } from "solito/image";
 import { useLink } from "solito/navigation";
 
-import BackArrow from "../images/back_arrow.svg";
+import BackArrow from "~/libs/assets/src/svgs/back_arrow.svg";
 
 const UniImage = withUnistyles(SolitoImage);
 

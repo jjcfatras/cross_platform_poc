@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 import { StyleSheet } from "react-native-unistyles";
 
+// import { storage } from "~/libs/utils/src/storage";
 import { breakpoints } from "./_constants";
 import { darkTheme, lightTheme } from "./themes";
 
@@ -23,7 +24,7 @@ declare module "react-native-unistyles" {
 StyleSheet.configure({
   breakpoints,
   settings: {
-    // initialTheme: "light",
+    // initialTheme: () => storage.getString("theme") ?? "light",
     adaptiveThemes: true,
   },
   themes: {

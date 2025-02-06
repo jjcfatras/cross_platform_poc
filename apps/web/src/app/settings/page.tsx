@@ -1,6 +1,5 @@
 "use client";
 
-import { useReducer } from "react";
 import { View } from "react-native";
 import { StyleSheet, UnistylesRuntime } from "react-native-unistyles";
 
@@ -8,44 +7,44 @@ import {
   BackButton,
   Container,
   Divider,
-  Picker,
+  // Picker,
   Screen,
   Text,
 } from "~/libs/ui/components";
 
-const THEME_OPTIONS = [
-  { label: "dark", value: "dark" },
-  { label: "light", value: "light" },
-];
+// const THEME_OPTIONS = [
+//   { label: "dark", value: "dark" },
+//   { label: "light", value: "light" },
+// ];
 
-type THEMES = "dark" | "light" | "system";
+// type THEMES = "dark" | "light" | "system";
 
-const _reducer = (state: THEMES, action: { type: string }) => {
-  switch (action.type) {
-    case "dark": {
-      UnistylesRuntime.setAdaptiveThemes(false);
-      UnistylesRuntime.setTheme("dark");
-      state = "dark";
-      return state;
-    }
-    case "light": {
-      UnistylesRuntime.setAdaptiveThemes(false);
-      UnistylesRuntime.setTheme("light");
-      state = "light";
-      return state;
-    }
-    case "system":
-    default: {
-      state = "system";
-      UnistylesRuntime.setAdaptiveThemes(true);
+// const _reducer = (state: THEMES, action: { type: string }) => {
+//   switch (action.type) {
+//     case "dark": {
+//       UnistylesRuntime.setAdaptiveThemes(false);
+//       UnistylesRuntime.setTheme("dark");
+//       state = "dark";
+//       return state;
+//     }
+//     case "light": {
+//       UnistylesRuntime.setAdaptiveThemes(false);
+//       UnistylesRuntime.setTheme("light");
+//       state = "light";
+//       return state;
+//     }
+//     case "system":
+//     default: {
+//       state = "system";
+//       UnistylesRuntime.setAdaptiveThemes(true);
 
-      return state;
-    }
-  }
-};
+//       return state;
+//     }
+//   }
+// };
 
 const SettingsPage = () => {
-  const [theme, dispatch] = useReducer(_reducer, "system");
+  // const [theme, dispatch] = useReducer(_reducer, "system");
 
   console.log({ currentTheme: UnistylesRuntime.colorScheme });
   console.log({ adaptiveTheme: UnistylesRuntime.hasAdaptiveThemes });
@@ -60,11 +59,11 @@ const SettingsPage = () => {
         <Divider />
         <View style={styles.sectionRow}>
           <Text type="h2">Select Your Theme: </Text>
-          <Picker
+          {/* <Picker
             items={THEME_OPTIONS}
             onValueChange={(itemValue) => dispatch({ type: itemValue })}
             selectedValue={theme}
-          />
+          /> */}
         </View>
       </Container>
     </Screen>

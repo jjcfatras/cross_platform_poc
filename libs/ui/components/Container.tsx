@@ -21,8 +21,6 @@ export const Container = ({
 const styles = StyleSheet.create((theme) => ({
   container: (hasHeader: boolean) => ({
     alignSelf: "center",
-    borderColor: theme.colors.good,
-    borderWidth: 2,
     flex: 1,
     width: "100%",
     backgroundColor: "transparent",

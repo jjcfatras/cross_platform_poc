@@ -1681,6 +1681,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@callstack/async-storage@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@callstack/async-storage@npm:2.0.3"
+  dependencies:
+    lodash.merge: "npm:^4.6.0"
+  peerDependencies:
+    "@react-native-community/async-storage": ^1.5.0
+  checksum: 10c0/f2da421645fea0197523b35902a442928b5578954e48852de7b0b6c51efec3f7ff02fa6e5fc6f394c2c46c311cae69949608f9a62b044b29c755fed255f2cc1b
+  languageName: node
+  linkType: hard
+
 "@cspotcode/source-map-support@npm:^0.8.0":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -2288,6 +2299,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.14.5"
     "@babel/preset-react": "npm:^7.14.5"
+    "@callstack/async-storage": "npm:^2.0.3"
     "@eslint/compat": "npm:^1.1.1"
     "@eslint/js": "npm:^9.8.0"
     "@expo/cli": "npm:~0.21.8"
@@ -2339,7 +2351,9 @@ __metadata:
     react-dom: "npm:~18.3.1"
     react-icons: "npm:^5.4.0"
     react-native: "npm:0.76.3"
+    react-native-dropdown-picker: "npm:^5.4.6"
     react-native-edge-to-edge: "npm:^1.4.3"
+    react-native-mmkv: "npm:^3.2.0"
     react-native-nitro-modules: "npm:^0.21.0"
     react-native-svg: "npm:~15.8.0"
     react-native-svg-transformer: "npm:~1.5.0"
@@ -12701,7 +12715,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.merge@npm:^4.6.2":
+"lodash.merge@npm:^4.6.0, lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: 10c0/402fa16a1edd7538de5b5903a90228aa48eb5533986ba7fa26606a49db2572bf414ff73a2c9f5d5fd36b31c46a5d5c7e1527749c07cbcf965ccff5fbdf32c506
@@ -15651,6 +15665,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-dropdown-picker@npm:^5.4.6":
+  version: 5.4.6
+  resolution: "react-native-dropdown-picker@npm:5.4.6"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/29b29d6168dc71386a0fd9dc5dedebd23cbb7baa977e4f37f6ff6fd13a800628e73e6624d0563b7471cec9a5dd76e196aed0e41d2da4bac8abefacbd1f0eb347
+  languageName: node
+  linkType: hard
+
 "react-native-edge-to-edge@npm:^1.4.3":
   version: 1.4.3
   resolution: "react-native-edge-to-edge@npm:1.4.3"
@@ -15658,6 +15682,16 @@ __metadata:
     react: ">=18.2.0"
     react-native: ">=0.74.0"
   checksum: 10c0/a73956604b2f0cd8de493295b556258c8c4d39bca040fa513ad441f460e80f9501a0c7840a5cf99453740c1b0c10b305fdd86fdb0a8eb57ff7bf61109532787d
+  languageName: node
+  linkType: hard
+
+"react-native-mmkv@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "react-native-mmkv@npm:3.2.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/41abc5b46d61de7bf0f6af0ed66fab19a391d3fdc30b011cc49ba4dce65ab7c7b1c53eda768bc71f718543e89c7d46848dab2cd537b2af39afd624a8b4f0fec4
   languageName: node
   linkType: hard
 

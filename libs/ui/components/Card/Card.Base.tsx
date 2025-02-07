@@ -11,7 +11,6 @@ export const CardBase = ({ children, ...rest }: CardProps) => (
 
 const styles = StyleSheet.create((theme) => ({
   card: {
-    alignItems: "center",
     backgroundColor: theme.colors.background,
     borderColor: theme.colors.brand,
     borderRadius: theme.sizing[1],

@@ -15,7 +15,6 @@ import {
   Screen,
   Text,
 } from "~/libs/ui/components";
-import { storage } from "~/libs/utils/src/storage";
 
 // const THEME_OPTIONS = [
 //   { label: "dark", value: "dark" },
@@ -62,23 +61,23 @@ const SettingsPage = () => {
           <Text type="h2">Select Your Theme: </Text>
           <Button
             onPress={() => {
-              // AsyncStorage.setItem("theme", "dark").then(() =>
-              //   UnistylesRuntime.setTheme("dark"),
-              // );
-              storage.set("theme", "dark");
+              UnistylesRuntime.setAdaptiveThemes(false);
               UnistylesRuntime.setTheme("dark");
             }}
             title="dark"
           />
           <Button
             onPress={() => {
-              // AsyncStorage.setItem("theme", "light").then(() =>
-              //   UnistylesRuntime.setTheme("light"),
-              // );
-              storage.set("theme", "light");
+              UnistylesRuntime.setAdaptiveThemes(false);
               UnistylesRuntime.setTheme("light");
             }}
             title="light"
+          />
+          <Button
+            onPress={() => {
+              UnistylesRuntime.setAdaptiveThemes(true);
+            }}
+            title="system"
           />
         </View>
       </Container>

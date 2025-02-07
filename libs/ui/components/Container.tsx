@@ -34,6 +34,5 @@ const styles = StyleSheet.create((theme) => ({
     },
     padding: theme.spacing[4],
     paddingTop: hasHeader ? 100 : theme.spacing[4],
-    height: "auto",
   }),
 }));

@@ -9,6 +9,7 @@ export const CardBody = ({ children, ...rest }: ViewProps) => (
 
 const styles = StyleSheet.create((theme) => ({
   body: {
+    alignItems: "center",
     padding: theme.spacing[1],
   },
 }));

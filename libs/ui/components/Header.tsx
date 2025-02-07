@@ -10,7 +10,10 @@ import Menu from "~/libs/assets/src/svgs/menu.svg";
 
 import { Text } from "./Text";
 
-const LINKS = [{ destination: "/settings", label: "Settings" }];
+const LINKS = [
+  // { destination: "/settings", label: "Settings" },
+  { destination: "/design-overview", label: "Design Overview" },
+];
 
 const UniLink = withUnistyles(TextLink);
 
@@ -51,6 +54,7 @@ const styles = StyleSheet.create((theme) => ({
     position: "absolute",
     right: 0,
     top: 0,
+    width: "100%",
   },
   header: {
     alignItems: "center",

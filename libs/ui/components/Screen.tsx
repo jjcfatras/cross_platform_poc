@@ -11,7 +11,7 @@ export const Screen = ({ children, style, ...rest }: ScreenProps) => (
 
 const styles = StyleSheet.create((theme) => ({
   screen: {
-    ...StyleSheet.absoluteFillObject,
     backgroundColor: theme.colors.background,
+    flex: 1,
   },
 }));

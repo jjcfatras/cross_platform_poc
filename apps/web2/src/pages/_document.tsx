@@ -56,9 +56,9 @@ export default class MyDocument extends Document {
 
   override render() {
     return (
-      <Html style={{ height: "100%" }}>
+      <Html style={{ height: "100%", margin: 0 }}>
         <Head />
-        <body style={{ height: "100%", overflow: "auto" }}>
+        <body style={{ height: "100%", margin: 0, overflow: "auto" }}>
           <Main />
           <NextScript />
         </body>

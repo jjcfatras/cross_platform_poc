@@ -58,6 +58,20 @@ module.exports = tsEslint.config(
           type: "natural",
         },
       ],
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          customGroups: [
+            {
+              elementNamePattern: "^(?:xs|sm|md|lg|xl|xxl)$",
+              groupName: "breakpoints",
+              selector: "property",
+              type: "unsorted",
+            },
+          ],
+          groups: ["breakpoints"],
+        },
+      ],
     },
   },
 

@@ -1,4 +1,3 @@
-/* eslint-disable perfectionist/sort-objects */
 import { View, type ViewProps } from "react-native";
 import { mq, StyleSheet } from "react-native-unistyles";
 
@@ -8,8 +7,8 @@ type ContainerProps = ViewProps & { hasHeader?: boolean };
 
 export const Container = ({
   children,
-  style,
   hasHeader = true,
+  style,
   ...rest
 }: ContainerProps) => (
   <View style={[styles.container(hasHeader), style]} {...rest}>
@@ -21,18 +20,21 @@ export const Container = ({
 const styles = StyleSheet.create((theme) => ({
   container: (hasHeader: boolean) => ({
     alignSelf: "center",
-    flex: 1,
-    width: "100%",
     backgroundColor: "transparent",
+    flex: 1,
     maxWidth: {
-      // [mq.only.width("xs", "sm")]: "100%",
-      // [mq.only.width("sm", "md")]: 540,
+      //   md: 720,
+      //   lg: 960,
+      //   xl: 1140,
+      //   xxl: 1320,
       [mq.only.width("md", "lg")]: 720,
+      // eslint-disable-next-line perfectionist/sort-objects
       [mq.only.width("lg", "xl")]: 960,
       [mq.only.width("xl", "xxl")]: 1140,
       [mq.only.width("xxl")]: 1320,
     },
     padding: theme.spacing[4],
-    paddingTop: hasHeader ? 100 : theme.spacing[4],
+    paddingTop: hasHeader ? 116 : theme.spacing[4],
+    width: "100%",
   }),
 }));

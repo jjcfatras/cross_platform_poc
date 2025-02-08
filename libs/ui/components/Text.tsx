@@ -24,6 +24,9 @@ const styles = StyleSheet.create((theme) => ({
         default: {
           color: theme.colors.textPrimary,
         },
+        inverse: {
+          color: theme.colors.background,
+        },
         secondary: {
           color: theme.colors.textSecondary,
         },
@@ -32,6 +35,9 @@ const styles = StyleSheet.create((theme) => ({
         },
       },
       type: {
+        bold: {
+          fontWeight: "bold",
+        },
         default: {
           fontSize: theme.sizing[4],
         },

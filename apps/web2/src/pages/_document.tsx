@@ -9,6 +9,7 @@ import Document, {
 } from "next/document";
 import { Children } from "react";
 import { AppRegistry } from "react-native";
+
 // Follows the setup for react-native-web:
 // https://necolas.github.io/react-native-web/docs/setup/#root-element
 // Plus additional React Native scroll and text parity styles for various

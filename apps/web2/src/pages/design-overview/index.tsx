@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, View } from "react-native";
+import { View } from "react-native";
 import {
   StyleSheet,
   UnistylesRuntime,
@@ -9,9 +9,11 @@ import {
 
 import {
   BackButton,
+  Button,
   Card,
   Container,
   Divider,
+  Grid,
   Screen,
   Text,
 } from "~/libs/ui/components";
@@ -36,15 +38,17 @@ const DesignOverview = () => {
                 UnistylesRuntime.setAdaptiveThemes(false);
                 UnistylesRuntime.setTheme("dark");
               }}
-              title="dark"
-            />
+            >
+              dark
+            </Button>
             <Button
               onPress={() => {
                 UnistylesRuntime.setAdaptiveThemes(false);
                 UnistylesRuntime.setTheme("light");
               }}
-              title="light"
-            />
+            >
+              light
+            </Button>
           </Card.Body>
         </Card>
         <Divider />
@@ -66,7 +70,7 @@ const DesignOverview = () => {
           <Card.Title>Sizing</Card.Title>
           <Card.Divider />
           <Card.Body>
-            <View style={styles.grid}>
+            <Grid>
               {Object.keys(theme["sizing"]).map((size) => (
                 <View key={size} style={styles.row}>
                   <Text>
@@ -85,7 +89,7 @@ const DesignOverview = () => {
                   />
                 </View>
               ))}
-            </View>
+            </Grid>
           </Card.Body>
         </Card>
         <Divider />
@@ -93,7 +97,7 @@ const DesignOverview = () => {
           <Card.Title>colors</Card.Title>
           <Card.Divider />
           <Card.Body>
-            <View style={styles.grid}>
+            <Grid>
               {Object.keys(theme["colors"]).map((color) => (
                 <View key={color} style={styles.row}>
                   <Text>{`${color}: `}</Text>
@@ -108,7 +112,7 @@ const DesignOverview = () => {
                   />
                 </View>
               ))}
-            </View>
+            </Grid>
           </Card.Body>
         </Card>
       </Container>
@@ -126,11 +130,6 @@ const styles = StyleSheet.create((theme) => ({
     height: 50,
     width: 50,
   }),
-  grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: theme.sizing[4],
-  },
   header: {
     textAlign: "center",
   },

@@ -1,21 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
-import { StyleSheet, withUnistyles } from "react-native-unistyles";
-import { TextLink } from "solito/link";
+import { StyleSheet } from "react-native-unistyles";
 
 import Menu from "~/libs/assets/src/svgs/menu.svg";
 
+import { Image } from "./Image";
 import { Text } from "./Text";
+import { TextLink } from "./TextLink";
 
-const LINKS = [
-  // { destination: "/settings", label: "Settings" },
-  { destination: "/design-overview", label: "Design Overview" },
-];
-
-const UniLink = withUnistyles(TextLink);
+const LINKS = [{ destination: "/design-overview", label: "Design Overview" }];
 
 export const Header = () => {
   const [isPressed, setIsPressed] = useState(false);
@@ -25,7 +20,7 @@ export const Header = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text color="white" type="h1">
+        <Text color="inverse" type="h1">
           Demo
         </Text>
         <TouchableOpacity onPress={_handlePress} style={styles.menu}>
@@ -34,12 +29,10 @@ export const Header = () => {
       </View>
       {isPressed && (
         <View style={styles.subHeader}>
-          {LINKS.map((link, index) => (
-            <UniLink href={link.destination} key={index}>
-              <Text color="white" type="link">
-                {link.label}
-              </Text>
-            </UniLink>
+          {LINKS.map((link) => (
+            <TextLink href={link.destination} key={link.label}>
+              {link.label}
+            </TextLink>
           ))}
         </View>
       )}
@@ -61,7 +54,6 @@ const styles = StyleSheet.create((theme) => ({
     flexDirection: "row",
     height: 100,
     justifyContent: "center",
-    width: "100%",
   },
   menu: {
     height: 100,

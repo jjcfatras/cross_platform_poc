@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native-unistyles";
 
 import { Text, type TextProps } from "../Text";
 
-type CardSubTitleProps = Omit<TextProps, "color" | "type">;
+export type CardSubTitleProps = Omit<TextProps, "color" | "type">;
 
 export const CardSubTitle = ({
   children,

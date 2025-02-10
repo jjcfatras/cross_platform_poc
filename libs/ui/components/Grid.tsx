@@ -10,11 +10,11 @@ export const Grid = ({ children }: GridProps) => (
 const styles = StyleSheet.create((theme) => ({
   grid: {
     flexDirection: {
-      xs: "column",
       md: "row",
     },
     flexWrap: "wrap",
     gap: theme.spacing[4],
     justifyContent: "center",
+    padding: theme.spacing[4],
   },
 }));

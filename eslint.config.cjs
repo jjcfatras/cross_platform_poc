@@ -70,6 +70,7 @@ module.exports = tsEslint.config(
             },
           ],
           groups: ["breakpoints"],
+          type: "natural",
         },
       ],
     },

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native-unistyles";
 
-import { Text, type TextProps } from "../Text";
+import { type TextProps, Text } from "../Text";
 
 export type CardTitleProps = Omit<TextProps, "color" | "type">;
 

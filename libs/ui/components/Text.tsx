@@ -1,5 +1,5 @@
-import { Text as RNText, type TextProps as RNTextProps } from "react-native";
-import { StyleSheet, type UnistylesVariants } from "react-native-unistyles";
+import { type TextProps as RNTextProps, Text as RNText } from "react-native";
+import { type UnistylesVariants, StyleSheet } from "react-native-unistyles";
 
 export type TextProps = RNTextProps & UnistylesVariants<typeof styles>;
 

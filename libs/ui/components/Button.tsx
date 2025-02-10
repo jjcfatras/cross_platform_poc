@@ -1,7 +1,7 @@
-import { TouchableOpacity, type TouchableOpacityProps } from "react-native";
+import { type TouchableOpacityProps, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
-import { Text, type TextProps } from "./Text";
+import { type TextProps, Text } from "./Text";
 
 export type ButtonProps = Omit<TouchableOpacityProps, "children"> &
   Pick<TextProps, "children">;

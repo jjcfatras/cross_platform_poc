@@ -1,4 +1,4 @@
-import { View, type ViewProps } from "react-native";
+import { type ViewProps, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
 export type GridProps = Pick<ViewProps, "children">;

@@ -1,6 +1,6 @@
 "use client";
 
-import { TouchableOpacity, type TouchableOpacityProps } from "react-native";
+import { type TouchableOpacityProps, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 import { useLink } from "solito/navigation";
 

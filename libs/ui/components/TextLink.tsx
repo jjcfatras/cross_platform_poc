@@ -1,10 +1,10 @@
 import { withUnistyles } from "react-native-unistyles";
 import {
-  TextLink as STextLink,
   type TextLinkProps as STextLinkProps,
+  TextLink as STextLink,
 } from "solito/link";
 
-import { Text, type TextProps } from "./Text";
+import { type TextProps, Text } from "./Text";
 
 const UniTextLink = withUnistyles(STextLink);
 

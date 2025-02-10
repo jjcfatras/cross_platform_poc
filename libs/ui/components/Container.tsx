@@ -1,4 +1,4 @@
-import { View, type ViewProps } from "react-native";
+import { type ViewProps, View } from "react-native";
 import { mq, StyleSheet } from "react-native-unistyles";
 
 import { Header } from "./Header";

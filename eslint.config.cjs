@@ -38,6 +38,20 @@ module.exports = tsEslint.config(
   },
   {
     rules: {
+      "perfectionist/sort-named-exports": [
+        "error",
+        {
+          type: "natural",
+          groupKind: "types-first",
+        },
+      ],
+      "perfectionist/sort-named-imports": [
+        "error",
+        {
+          type: "natural",
+          groupKind: "types-first",
+        },
+      ],
       "perfectionist/sort-imports": [
         "error",
         {
@@ -55,6 +69,7 @@ module.exports = tsEslint.config(
           internalPattern: ["~/.*"],
           newlinesBetween: "always",
           order: "asc",
+          tsconfigRootDir: "./tsconfig.base.json",
           type: "natural",
         },
       ],

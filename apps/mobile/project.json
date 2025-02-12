@@ -38,6 +38,12 @@
         "cwd": "apps/mobile",
         "commands": ["xed ios"]
       }
+    },
+    "install": {
+      "executor": "@nx/expo:install",
+      "options": {
+        "check": true
+      }
     }
   }
 }

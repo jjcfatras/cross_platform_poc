@@ -11,6 +11,9 @@ export const Screen = ({ children, style, ...rest }: ScreenProps) => (
 
 const styles = StyleSheet.create((theme) => ({
   screen: {
+    _web: {
+      _classNames: "screen",
+    },
     backgroundColor: theme.colors.background,
     flex: 1,
   },

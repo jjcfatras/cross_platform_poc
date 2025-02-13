@@ -27,7 +27,15 @@
     "picocolors": "*",
     "tsconfig-paths": "*",
     "tslib": "*",
-    "react-native-svg-transformer": "*"
+    "react-native-svg-transformer": "*",
+    "react-native-unistyles": "*",
+    "react-native-nitro-modules": "*",
+    "react-native-edge-to-edge": "*",
+    "expo-dev-client": "*",
+    "solito": "*",
+    "next": "*",
+    "expo-image": "*",
+    "expo-font": "*"
   },
   "scripts": {
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/mobile",

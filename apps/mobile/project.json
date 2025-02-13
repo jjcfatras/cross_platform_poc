@@ -27,9 +27,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/mobile",
-        "commands": [
-          "cd ios && RCT_NEW_ARCH_ENABLED=1 pod install --repo-update"
-        ]
+        "commands": ["cd ios && RCT_NEW_ARCH_ENABLED=1 pod install"]
       }
     },
     "xcode": {
@@ -41,9 +39,7 @@
     },
     "install": {
       "executor": "@nx/expo:install",
-      "options": {
-        "check": true
-      }
+      "options": {}
     }
   }
 }

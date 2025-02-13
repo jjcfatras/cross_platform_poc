@@ -19,9 +19,11 @@ export const Container = ({
 
 const styles = StyleSheet.create((theme) => ({
   container: (hasHeader: boolean) => ({
-    alignSelf: "center",
+    _web: {
+      _classNames: "container",
+    },
     backgroundColor: "transparent",
-    flex: 1,
+    marginHorizontal: "auto",
     maxWidth: {
       md: 720,
       lg: 960,

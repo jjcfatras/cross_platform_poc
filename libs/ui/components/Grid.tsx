@@ -1,5 +1,5 @@
 import { type ViewProps, View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { mq, StyleSheet } from "react-native-unistyles";
 
 export type GridProps = Pick<ViewProps, "children">;
 
@@ -9,10 +9,19 @@ export const Grid = ({ children }: GridProps) => (
 
 const styles = StyleSheet.create((theme) => ({
   grid: {
-    flexDirection: {
-      md: "row",
+    _web: {
+      _classNames: "grid",
     },
-    flexWrap: "wrap",
+    flexDirection: {
+      [mq.only.width("xs", "md")]: "column",
+      // eslint-disable-next-line perfectionist/sort-objects
+      [mq.only.width("md")]: "row",
+    },
+    flexWrap: {
+      [mq.only.width("xs", "md")]: "nowrap",
+      // eslint-disable-next-line perfectionist/sort-objects
+      [mq.only.width("md")]: "wrap",
+    },
     gap: theme.spacing[4],
     justifyContent: "center",
     padding: theme.spacing[4],

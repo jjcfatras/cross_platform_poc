@@ -5,10 +5,9 @@ export const Divider = () => <View style={styles.divider} />;
 
 const styles = StyleSheet.create((theme) => ({
   divider: {
-    alignSelf: "center",
+    alignSelf: "stretch",
     backgroundColor: theme.colors.divider,
     height: StyleSheet.hairlineWidth,
     marginVertical: theme.spacing[4],
-    width: "100%",
   },
 }));

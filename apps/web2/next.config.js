@@ -21,6 +21,8 @@ const nextConfig = {
     "solito",
     "react-native-dropdown-picker",
     "react-native-mmkv",
+    "react-native-svg",
+    "react-native-svg-transformer",
   ],
   webpack: (config) => {
     config.resolve.alias = {

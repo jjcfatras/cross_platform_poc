@@ -25,7 +25,7 @@ const styles = StyleSheet.create((theme) => ({
           color: theme.colors.textPrimary,
         },
         inverse: {
-          color: theme.colors.background,
+          color: theme.colors.inverse,
         },
         secondary: {
           color: theme.colors.textSecondary,

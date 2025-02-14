@@ -24,5 +24,6 @@
     "theming/**/*.tsx",
     "components/**/*.ts",
     "components/**/*.tsx"
-  ]
+  ],
+  "files": ["../../@types/svg.d.ts"]
 }

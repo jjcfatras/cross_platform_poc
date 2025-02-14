@@ -4,9 +4,7 @@ import { type TouchableOpacityProps, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 import { useLink } from "solito/navigation";
 
-import BackArrow from "~/libs/assets/src/svgs/back_arrow.svg";
-
-import { Image } from "./Image";
+import { BackArrow } from "~/libs/assets/src/icons/BackArrow";
 
 export type BackButtonProps = TouchableOpacityProps;
 
@@ -17,12 +15,17 @@ export const BackButton = ({ style, ...rest }: BackButtonProps) => {
 
   return (
     <TouchableOpacity style={[styles.button, style]} {...rest} {...linkProps}>
-      <Image alt="back arrow" fill src={BackArrow} />
+      <BackArrow style={styles.arrow} />
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create((theme) => ({
+  arrow: {
+    color: theme.colors.inverse,
+    height: 50,
+    width: 50,
+  },
   button: {
     backgroundColor: theme.colors.brand,
     borderRadius: 25,

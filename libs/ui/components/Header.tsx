@@ -4,9 +4,8 @@ import { useState } from "react";
 import { TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
-import Menu from "~/libs/assets/src/svgs/menu.svg";
+import { Menu } from "~/libs/assets/src/icons/Menu";
 
-import { Image } from "./Image";
 import { Text } from "./Text";
 import { TextLink } from "./TextLink";
 
@@ -23,8 +22,8 @@ export const Header = () => {
         <Text color="inverse" type="h1">
           Demo
         </Text>
-        <TouchableOpacity onPress={_handlePress} style={styles.menu}>
-          <Image alt="menu" fill src={Menu} />
+        <TouchableOpacity onPress={_handlePress} style={styles.headerRight}>
+          <Menu style={styles.menu} />
         </TouchableOpacity>
       </View>
       {isPressed && (
@@ -42,6 +41,9 @@ export const Header = () => {
 
 const styles = StyleSheet.create((theme) => ({
   container: {
+    _web: {
+      _classNames: "header",
+    },
     backgroundColor: theme.colors.brand,
     left: 0,
     position: "absolute",
@@ -55,10 +57,13 @@ const styles = StyleSheet.create((theme) => ({
     height: 100,
     justifyContent: "center",
   },
-  menu: {
-    height: 100,
+  headerRight: {
     position: "absolute",
     right: theme.spacing[4],
+  },
+  menu: {
+    color: theme.colors.inverse,
+    height: 100,
     width: 100,
   },
   subHeader: {

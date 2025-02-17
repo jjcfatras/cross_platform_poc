@@ -7,5 +7,6 @@ export * from "./Grid";
 export * from "./Header";
 export * from "./Image";
 export * from "./Screen";
+export * from "./StatusBar";
 export * from "./Text";
 export * from "./TextLink";

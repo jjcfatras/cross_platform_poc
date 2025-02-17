@@ -3,11 +3,14 @@ import { StyleSheet } from "react-native-unistyles";
 
 export type ScreenProps = ViewProps;
 
-export const Screen = ({ children, style, ...rest }: ScreenProps) => (
-  <View style={[styles.screen, style]} {...rest}>
-    {children}
-  </View>
-);
+export const Screen = ({ children, style, ...rest }: ScreenProps) => {
+  console.log("Web Screen");
+  return (
+    <View style={[styles.screen, style]} {...rest}>
+      {children}
+    </View>
+  );
+};
 
 const styles = StyleSheet.create((theme) => ({
   screen: {
@@ -16,5 +19,6 @@ const styles = StyleSheet.create((theme) => ({
     },
     backgroundColor: theme.colors.background,
     flex: 1,
+    minHeight: "100%",
   },
 }));

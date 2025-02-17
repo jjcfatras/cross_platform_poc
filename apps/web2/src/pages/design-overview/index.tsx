@@ -24,10 +24,15 @@ const DesignOverview = () => {
   return (
     <Screen>
       <Container hasHeader={false}>
-        <BackButton />
-        <Text style={styles.header} type="h1">
-          Design Overview
-        </Text>
+        <View style={[styles.row, { justifyContent: "center" }]}>
+          <View style={styles.headerLeft}>
+            <BackButton />
+          </View>
+          <Text style={styles.header} type="h1">
+            Design Overview
+          </Text>
+        </View>
+
         <Divider />
         <Card>
           <Card.Title>Theme</Card.Title>
@@ -132,6 +137,10 @@ const styles = StyleSheet.create((theme) => ({
   }),
   header: {
     textAlign: "center",
+  },
+  headerLeft: {
+    left: theme.spacing[4],
+    position: "absolute",
   },
   row: {
     alignItems: "center",

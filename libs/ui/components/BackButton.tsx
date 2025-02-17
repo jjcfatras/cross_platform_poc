@@ -6,30 +6,32 @@ import { useLink } from "solito/navigation";
 
 import { BackArrow } from "~/libs/assets/src/icons/BackArrow";
 
-export type BackButtonProps = TouchableOpacityProps;
+export type BackButtonProps = Omit<TouchableOpacityProps, "style"> & {
+  size?: number;
+};
 
-export const BackButton = ({ style, ...rest }: BackButtonProps) => {
+export const BackButton = ({ size = 50, ...rest }: BackButtonProps) => {
   const linkProps = useLink({
     href: "/",
   });
 
   return (
-    <TouchableOpacity style={[styles.button, style]} {...rest} {...linkProps}>
-      <BackArrow style={styles.arrow} />
+    <TouchableOpacity style={styles.button(size)} {...rest} {...linkProps}>
+      <BackArrow style={styles.arrow(size)} />
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create((theme) => ({
-  arrow: {
+  arrow: (size: number) => ({
     color: theme.colors.inverse,
-    height: 50,
-    width: 50,
-  },
-  button: {
+    height: size,
+    width: size,
+  }),
+  button: (size: number) => ({
     backgroundColor: theme.colors.brand,
-    borderRadius: 25,
-    height: 50,
-    width: 50,
-  },
+    borderRadius: size / 2,
+    height: size,
+    width: size,
+  }),
 }));

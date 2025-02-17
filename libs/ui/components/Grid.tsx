@@ -24,6 +24,6 @@ const styles = StyleSheet.create((theme) => ({
     },
     gap: theme.spacing[4],
     justifyContent: "center",
-    padding: theme.spacing[4],
+    paddingVertical: theme.spacing[4],
   },
 }));

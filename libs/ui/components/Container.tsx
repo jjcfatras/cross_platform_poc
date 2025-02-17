@@ -30,7 +30,7 @@ const styles = StyleSheet.create((theme) => ({
       xl: 1140,
       xxl: 1320,
     },
-    padding: theme.spacing[0],
+    paddingHorizontal: theme.spacing[4],
     paddingTop: hasHeader ? 100 : theme.spacing[4],
     width: "100%",
   }),

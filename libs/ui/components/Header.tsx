@@ -49,7 +49,6 @@ const styles = StyleSheet.create((theme) => ({
     position: "absolute",
     right: 0,
     top: 0,
-    width: "100%",
   },
   header: {
     alignItems: "center",
@@ -58,8 +57,10 @@ const styles = StyleSheet.create((theme) => ({
     justifyContent: "center",
   },
   headerRight: {
+    height: 100,
     position: "absolute",
     right: theme.spacing[4],
+    width: 100,
   },
   menu: {
     color: theme.colors.inverse,

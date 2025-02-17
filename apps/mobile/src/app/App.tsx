@@ -1,7 +1,7 @@
 import "~/libs/ui/theming/unistyles";
 
 import { NavigationContainer } from "@react-navigation/native";
-import React, { StrictMode, useRef } from "react";
+import React, { useRef } from "react";
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet } from "react-native";
 
 import { Card, Container, Grid, Text } from "~/libs/ui/components";
@@ -10,39 +10,37 @@ export const App = () => {
   const scrollViewRef = useRef<null | ScrollView>(null);
 
   return (
-    <StrictMode>
-      <NavigationContainer>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView
-          style={{
-            flex: 1,
+    <NavigationContainer>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView
+        style={{
+          flex: 1,
+        }}
+      >
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          ref={(ref) => {
+            scrollViewRef.current = ref;
           }}
+          style={styles.scrollView}
         >
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            ref={(ref) => {
-              scrollViewRef.current = ref;
-            }}
-            style={styles.scrollView}
-          >
-            <Container>
-              <Grid>
-                {Array.from({ length: 20 }, (_, index) => (
-                  <Card key={index}>
-                    <Card.Title>Hello World</Card.Title>
-                    <Card.SubTitle>Hello World</Card.SubTitle>
-                    <Card.Divider />
-                    <Card.Body>
-                      <Text>Body text goes here</Text>
-                    </Card.Body>
-                  </Card>
-                ))}
-              </Grid>
-            </Container>
-          </ScrollView>
-        </SafeAreaView>
-      </NavigationContainer>
-    </StrictMode>
+          <Container>
+            <Grid>
+              {Array.from({ length: 20 }, (_, index) => (
+                <Card key={index}>
+                  <Card.Title>Hello World</Card.Title>
+                  <Card.SubTitle>Hello World</Card.SubTitle>
+                  <Card.Divider />
+                  <Card.Body>
+                    <Text>Body text goes here</Text>
+                  </Card.Body>
+                </Card>
+              ))}
+            </Grid>
+          </Container>
+        </ScrollView>
+      </SafeAreaView>
+    </NavigationContainer>
   );
 };
 const styles = StyleSheet.create({

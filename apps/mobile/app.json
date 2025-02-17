@@ -1,6 +1,7 @@
 {
   "expo": {
     "newArchEnabled": true,
+    "scheme": "app",
     "name": "Mobile",
     "slug": "mobile",
     "version": "1.0.0",

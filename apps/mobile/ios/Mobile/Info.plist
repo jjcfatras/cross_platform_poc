@@ -27,6 +27,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>app</string>
           <string>com.jfatras.mobile</string>
         </array>
       </dict>

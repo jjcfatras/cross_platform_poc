@@ -38,7 +38,10 @@
     "expo-font": "*",
     "@react-navigation/native": "*",
     "@react-navigation/native-stack": "*",
-    "expo-linking": "*"
+    "expo-linking": "*",
+    "react-native-screens": "*",
+    "react-native-safe-area-context": "*",
+    "expo-status-bar": "*"
   },
   "scripts": {
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/mobile",

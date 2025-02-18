@@ -2,21 +2,26 @@
 
 import { type TouchableOpacityProps, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
-import { useLink } from "solito/navigation";
+import { usePathname, useRouter } from "solito/navigation";
 
 import { BackArrow } from "~/libs/assets/src/icons/BackArrow";
 
-export type BackButtonProps = Omit<TouchableOpacityProps, "style"> & {
+export type BackButtonProps = Omit<TouchableOpacityProps, "children"> & {
   size?: number;
 };
 
-export const BackButton = ({ size = 50, ...rest }: BackButtonProps) => {
-  const linkProps = useLink({
-    href: "/",
-  });
+export const BackButton = ({ size = 50, style, ...rest }: BackButtonProps) => {
+  const { back, push } = useRouter();
+  const _pathName = usePathname();
+
+  const _handlePress = () => (_pathName !== "/" ? back() : push("/"));
 
   return (
-    <TouchableOpacity style={styles.button(size)} {...rest} {...linkProps}>
+    <TouchableOpacity
+      onPress={_handlePress}
+      style={[styles.button(size), style]}
+      {...rest}
+    >
       <BackArrow style={styles.arrow(size)} />
     </TouchableOpacity>
   );

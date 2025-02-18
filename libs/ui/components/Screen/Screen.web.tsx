@@ -19,6 +19,5 @@ const styles = StyleSheet.create((theme) => ({
     },
     backgroundColor: theme.colors.background,
     flex: 1,
-    minHeight: "100%",
   },
 }));

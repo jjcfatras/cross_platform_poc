@@ -3,12 +3,24 @@ import {
   StatusBar as ExpoStatusBar,
 } from "expo-status-bar";
 import { View } from "react-native";
-import { StyleSheet, withUnistyles } from "react-native-unistyles";
+import {
+  StyleSheet,
+  UnistylesRuntime,
+  withUnistyles,
+} from "react-native-unistyles";
 
-const Test = withUnistyles(ExpoStatusBar);
+const UniStatusBar = withUnistyles(ExpoStatusBar);
 
 export type StatusBarProps = ExpoStatusBarProps & {
   type?: "filled" | "transparent";
+};
+
+const _renderType = (type: StatusBarProps["type"]) => {
+  if (type === "filled") {
+    return "inverted";
+  } else {
+    return UnistylesRuntime.colorScheme === "dark" ? "inverted" : "auto";
+  }
 };
 
 export const StatusBar = ({
@@ -17,11 +29,7 @@ export const StatusBar = ({
 }: StatusBarProps) => {
   return (
     <View style={styles.statusBar(type)}>
-      <Test
-        style={type === "filled" ? "inverted" : "auto"}
-        translucent={false}
-        {...rest}
-      />
+      <UniStatusBar style={_renderType(type)} translucent={false} {...rest} />
     </View>
   );
 };

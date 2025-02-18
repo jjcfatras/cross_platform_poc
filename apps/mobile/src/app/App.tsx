@@ -38,8 +38,6 @@ export const App = () => {
     prefixes: [prefix],
   };
 
-  console.log(JSON.stringify({ prefix }, null, "\t"));
-
   return (
     <StrictMode>
       <Navigation linking={_linking} />

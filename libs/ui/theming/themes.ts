@@ -14,6 +14,7 @@ export const lightTheme = {
     transparent: palette.transparent,
     white: palette.base100,
   },
+  isDark: false,
   sizing,
   spacing,
 } as const;
@@ -32,6 +33,7 @@ export const darkTheme = {
     transparent: palette.transparent,
     white: palette.base100,
   },
+  isDark: true,
   sizing,
   spacing,
 } as const;

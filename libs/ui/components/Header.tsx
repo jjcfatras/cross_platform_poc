@@ -1,11 +1,11 @@
 "use client";
 
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
-import { TouchableOpacity, View } from "react-native";
+import { Platform, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
-import { Menu } from "~/libs/assets/src/icons/Menu";
-
+import { MenuButton } from "./MenuButton";
 import { Text } from "./Text";
 import { TextLink } from "./TextLink";
 
@@ -16,15 +16,22 @@ export const Header = () => {
 
   const _handlePress = () => setIsPressed((prevState) => !prevState);
 
+  if (Platform.OS !== "web") {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const navigation = useNavigation();
+
+    navigation.addListener("blur", () => {
+      return isPressed ? setIsPressed(false) : undefined;
+    });
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text color="inverse" type="h1">
           Demo
         </Text>
-        <TouchableOpacity onPress={_handlePress} style={styles.headerRight}>
-          <Menu style={styles.menu} />
-        </TouchableOpacity>
+        <MenuButton onPress={_handlePress} style={styles.headerRight} />
       </View>
       {isPressed && (
         <View style={styles.subHeader}>
@@ -60,11 +67,6 @@ const styles = StyleSheet.create((theme) => ({
     height: 100,
     position: "absolute",
     right: theme.spacing[4],
-    width: 100,
-  },
-  menu: {
-    color: theme.colors.inverse,
-    height: 100,
     width: 100,
   },
   subHeader: {

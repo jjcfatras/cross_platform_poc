@@ -1,5 +1,6 @@
 {
   "expo": {
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "scheme": "app",
     "name": "Mobile",

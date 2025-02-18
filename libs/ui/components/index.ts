@@ -6,6 +6,7 @@ export * from "./Divider";
 export * from "./Grid";
 export * from "./Header";
 export * from "./Image";
+export * from "./MenuButton";
 export * from "./Screen";
 export * from "./StatusBar";
 export * from "./Text";

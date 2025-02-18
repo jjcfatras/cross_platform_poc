@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, StatusBar, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import {
   StyleSheet,
   UnistylesRuntime,
@@ -21,110 +21,105 @@ export const DesignOverviewScreen = () => {
 
   return (
     <Screen>
-      <SafeAreaView>
-        <StatusBar barStyle="default" />
-        <ScrollView>
-          <Container hasHeader={false}>
-            <View style={[styles.row, { justifyContent: "center" }]}>
-              <View style={styles.headerLeft}>
-                <BackButton />
-              </View>
-              <Text style={styles.header} type="h1">
-                Design Overview
-              </Text>
+      <ScrollView>
+        <Container hasHeader={false}>
+          <View style={[styles.row, { justifyContent: "center" }]}>
+            <View style={styles.headerLeft}>
+              <BackButton />
             </View>
-            <Divider />
-            <Card>
-              <Card.Title>Theme</Card.Title>
-              <Card.Divider />
-              <Card.Body
-                style={[styles.row, { justifyContent: "space-evenly" }]}
+            <Text style={styles.header} type="h1">
+              Design Overview
+            </Text>
+          </View>
+          <Divider />
+          <Card>
+            <Card.Title>Theme</Card.Title>
+            <Card.Divider />
+            <Card.Body style={[styles.row, { justifyContent: "space-evenly" }]}>
+              <Button
+                onPress={() => {
+                  UnistylesRuntime.setAdaptiveThemes(false);
+                  UnistylesRuntime.setTheme("dark");
+                }}
               >
-                <Button
-                  onPress={() => {
-                    UnistylesRuntime.setAdaptiveThemes(false);
-                    UnistylesRuntime.setTheme("dark");
-                  }}
-                >
-                  dark
-                </Button>
-                <Button
-                  onPress={() => {
-                    UnistylesRuntime.setAdaptiveThemes(false);
-                    UnistylesRuntime.setTheme("light");
-                  }}
-                >
-                  light
-                </Button>
-              </Card.Body>
-            </Card>
-            <Divider />
-            <Card>
-              <Card.Title>Text</Card.Title>
-              <Card.Divider />
-              <Card.Body>
-                <Text type="h1">h1: Hello World</Text>
-                <Text type="h2">h2: Hello World</Text>
-                <Text type="h3">h3: Hello World</Text>
-                <Text type="h4">h4: Hello World</Text>
-                <Text>default: Hello World</Text>
-                <Text type="italic">italic: Hello World</Text>
-                <Text type="link">link: Hello World</Text>
-              </Card.Body>
-            </Card>
-            <Divider />
-            <Card>
-              <Card.Title>Sizing</Card.Title>
-              <Card.Divider />
-              <Card.Body>
-                <Grid>
-                  {Object.keys(theme["sizing"]).map((size) => (
-                    <View key={size} style={styles.row}>
-                      <Text>
-                        {`${
-                          theme["sizing"][
-                            Number(size) as keyof (typeof theme)["sizing"]
-                          ]
-                        }px: `}
-                      </Text>
-                      <View
-                        style={styles.sizeBlock(
-                          theme["sizing"][
-                            Number(size) as keyof (typeof theme)["sizing"]
+                dark
+              </Button>
+              <Button
+                onPress={() => {
+                  UnistylesRuntime.setAdaptiveThemes(false);
+                  UnistylesRuntime.setTheme("light");
+                }}
+              >
+                light
+              </Button>
+            </Card.Body>
+          </Card>
+          <Divider />
+          <Card>
+            <Card.Title>Text</Card.Title>
+            <Card.Divider />
+            <Card.Body>
+              <Text type="h1">h1: Hello World</Text>
+              <Text type="h2">h2: Hello World</Text>
+              <Text type="h3">h3: Hello World</Text>
+              <Text type="h4">h4: Hello World</Text>
+              <Text>default: Hello World</Text>
+              <Text type="italic">italic: Hello World</Text>
+              <Text type="link">link: Hello World</Text>
+            </Card.Body>
+          </Card>
+          <Divider />
+          <Card>
+            <Card.Title>Sizing</Card.Title>
+            <Card.Divider />
+            <Card.Body>
+              <Grid>
+                {Object.keys(theme["sizing"]).map((size) => (
+                  <View key={size} style={styles.row}>
+                    <Text>
+                      {`${
+                        theme["sizing"][
+                          Number(size) as keyof (typeof theme)["sizing"]
+                        ]
+                      }px: `}
+                    </Text>
+                    <View
+                      style={styles.sizeBlock(
+                        theme["sizing"][
+                          Number(size) as keyof (typeof theme)["sizing"]
+                        ],
+                      )}
+                    />
+                  </View>
+                ))}
+              </Grid>
+            </Card.Body>
+          </Card>
+          <Divider />
+          <Card>
+            <Card.Title>colors</Card.Title>
+            <Card.Divider />
+            <Card.Body>
+              <Grid>
+                {Object.keys(theme["colors"]).map((color) => (
+                  <View key={color} style={styles.row}>
+                    <Text>{`${color}: `}</Text>
+                    <View
+                      style={[
+                        styles.colorBlock(
+                          theme["colors"][
+                            color as keyof (typeof theme)["colors"]
                           ],
-                        )}
-                      />
-                    </View>
-                  ))}
-                </Grid>
-              </Card.Body>
-            </Card>
-            <Divider />
-            <Card>
-              <Card.Title>colors</Card.Title>
-              <Card.Divider />
-              <Card.Body>
-                <Grid>
-                  {Object.keys(theme["colors"]).map((color) => (
-                    <View key={color} style={styles.row}>
-                      <Text>{`${color}: `}</Text>
-                      <View
-                        style={[
-                          styles.colorBlock(
-                            theme["colors"][
-                              color as keyof (typeof theme)["colors"]
-                            ],
-                          ),
-                        ]}
-                      />
-                    </View>
-                  ))}
-                </Grid>
-              </Card.Body>
-            </Card>
-          </Container>
-        </ScrollView>
-      </SafeAreaView>
+                        ),
+                      ]}
+                    />
+                  </View>
+                ))}
+              </Grid>
+            </Card.Body>
+          </Card>
+        </Container>
+      </ScrollView>
     </Screen>
   );
 };

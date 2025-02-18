@@ -26,7 +26,6 @@ StyleSheet.configure({
   settings: {
     // initialTheme: () => storage.getString("theme") ?? "light",
     adaptiveThemes: true,
-    nativeBreakpointsMode: "points",
   },
   themes: {
     dark: darkTheme,

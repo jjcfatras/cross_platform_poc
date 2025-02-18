@@ -19,11 +19,6 @@
     "src/**/*.spec.jsx",
     "src/**/*.test.jsx"
   ],
-  "include": [
-    "theming/**/*.ts",
-    "theming/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx"
-  ],
+  "include": ["src/**/*.{ts,tsx}"],
   "files": ["../../@types/svg.d.ts"]
 }

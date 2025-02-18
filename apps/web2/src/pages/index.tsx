@@ -1,4 +1,4 @@
-import { Card, Container, Grid, Screen, Text } from "~/libs/ui/components";
+import { Card, Container, Grid, Screen, Text } from "~/libs/ui/src/components";
 
 export default function Index() {
   return (

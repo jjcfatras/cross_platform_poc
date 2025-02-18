@@ -10,7 +10,7 @@ import {
   // Picker,
   Screen,
   Text,
-} from "~/libs/ui/components";
+} from "~/libs/ui/src/components";
 
 // const THEME_OPTIONS = [
 //   { label: "dark", value: "dark" },

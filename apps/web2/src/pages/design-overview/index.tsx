@@ -16,7 +16,7 @@ import {
   Grid,
   Screen,
   Text,
-} from "~/libs/ui/components";
+} from "~/libs/ui/src/components";
 
 const DesignOverview = () => {
   const { theme } = useUnistyles();

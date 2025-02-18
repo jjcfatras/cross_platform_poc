@@ -1,7 +1,8 @@
 "use client";
-import "~/libs/ui/theming/unistyles";
 
-import { Card, Container, Screen, Text } from "~/libs/ui/components";
+import "~/libs/ui/src/theming/unistyles";
+
+import { Card, Container, Screen, Text } from "~/libs/ui/src/components";
 
 export default function Index() {
   return (

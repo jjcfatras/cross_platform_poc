@@ -1,4 +1,4 @@
-import "~/libs/ui/theming/unistyles";
+import "~/libs/ui/src/theming/unistyles";
 
 import { createStaticNavigation } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";

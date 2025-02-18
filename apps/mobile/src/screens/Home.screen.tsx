@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { ScrollView } from "react-native";
 
-import { Card, Container, Grid, Screen, Text } from "~/libs/ui/components";
+import { Card, Container, Grid, Screen, Text } from "~/libs/ui/src/components";
 
 export const HomeScreen = () => {
   const scrollViewRef = useRef<null | ScrollView>(null);

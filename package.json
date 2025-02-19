@@ -61,6 +61,7 @@
     "@react-native-picker/picker": "2.9.0",
     "@react-navigation/native": "^7.0.14",
     "@react-navigation/native-stack": "^7.2.0",
+    "axios": "^1.7.9",
     "expo": "~52.0.33",
     "expo-build-properties": "~0.13.2",
     "expo-dev-client": "~5.0.12",
@@ -85,7 +86,8 @@
     "react-native-svg-transformer": "~1.5.0",
     "react-native-unistyles": "3.0.0-beta.7",
     "react-native-web": "~0.19.13",
-    "solito": "^4.3.0"
+    "solito": "^4.3.0",
+    "swr": "^2.3.2"
   },
   "scripts": {
     "postinstall": "husky"

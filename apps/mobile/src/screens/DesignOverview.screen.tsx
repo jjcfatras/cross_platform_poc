@@ -22,7 +22,7 @@ export const DesignOverviewScreen = () => {
   return (
     <Screen>
       <ScrollView>
-        <Container hasHeader={false}>
+        <Container>
           <View style={[styles.row, { justifyContent: "center" }]}>
             <BackButton style={styles.headerLeft} />
             <Text style={styles.header} type="h1">

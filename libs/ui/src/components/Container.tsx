@@ -1,9 +1,7 @@
 import { type ViewProps, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
-import { Header } from "./Header";
-
-type ContainerProps = ViewProps & { hasHeader?: boolean };
+export type ContainerProps = ViewProps & { hasHeader?: boolean };
 
 export const Container = ({
   children,
@@ -11,14 +9,13 @@ export const Container = ({
   style,
   ...rest
 }: ContainerProps) => (
-  <View style={[styles.container(hasHeader), style]} {...rest}>
+  <View style={[styles.container, style]} {...rest}>
     {children}
-    {hasHeader && <Header />}
   </View>
 );
 
 const styles = StyleSheet.create((theme) => ({
-  container: (hasHeader: boolean) => ({
+  container: {
     _web: {
       _classNames: "container",
     },
@@ -31,7 +28,7 @@ const styles = StyleSheet.create((theme) => ({
       xxl: 1320,
     },
     paddingHorizontal: theme.spacing[4],
-    paddingTop: hasHeader ? 100 : theme.spacing[4],
+    paddingVertical: theme.spacing[4],
     width: "100%",
-  }),
+  },
 }));

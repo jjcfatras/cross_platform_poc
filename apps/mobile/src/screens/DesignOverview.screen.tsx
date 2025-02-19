@@ -24,9 +24,7 @@ export const DesignOverviewScreen = () => {
       <ScrollView>
         <Container hasHeader={false}>
           <View style={[styles.row, { justifyContent: "center" }]}>
-            <View style={styles.headerLeft}>
-              <BackButton />
-            </View>
+            <BackButton style={styles.headerLeft} />
             <Text style={styles.header} type="h1">
               Design Overview
             </Text>
@@ -136,7 +134,7 @@ const styles = StyleSheet.create((theme) => ({
     textAlign: "center",
   },
   headerLeft: {
-    left: theme.spacing[4],
+    left: theme.spacing[0],
     position: "absolute",
   },
   row: {

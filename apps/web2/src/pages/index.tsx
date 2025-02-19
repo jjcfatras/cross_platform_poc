@@ -21,7 +21,7 @@ export default function Index() {
   console.log(JSON.stringify({ albumData }, null, "\t"));
 
   return (
-    <Screen hasHeader>
+    <Screen>
       <Container>
         <Grid>
           {Array.from({ length: 20 }, (_, index) => (

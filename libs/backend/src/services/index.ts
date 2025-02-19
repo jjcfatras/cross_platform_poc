@@ -1,17 +1,21 @@
 import axios from "axios";
 
-const CLIENT_ID = "ef46c9089dd44794b9ec7132de3cfc64";
-const CLIENT_SECRET = "aa27431b924e4ca19674ec747418b45d";
+import { isNumber } from "~/libs/utils/src/helpers";
 
-type AuthReponseProps = {
+import { API_BUFFER, CLIENT_ID, CLIENT_SECRET } from "../constants";
+import type { AlbumData } from "../types";
+
+type AuthCache = {
+  data: AuthReponse;
+  duration: number | undefined;
+  fetchTime: number;
+};
+
+type AuthReponse = {
   access_token: string;
   expires_in: number;
   token_type: "Bearer";
 };
-
-const API_BUFFER = 5;
-
-const isNumber = (arg: unknown): arg is number => typeof arg === "number";
 
 export const isTokenExpired = ({
   tokenDuration,
@@ -24,13 +28,7 @@ export const isTokenExpired = ({
   isNumber(tokenDuration) &&
   Math.abs(Date.now() - tokenFetchTime) >= (tokenDuration - API_BUFFER) * 1000;
 
-type AuthCacheProps = {
-  data: AuthReponseProps;
-  duration: number | undefined;
-  fetchTime: number;
-};
-
-const _authCache = new Map<string, AuthCacheProps>();
+const _authCache = new Map<string, AuthCache>();
 
 export const getAuthToken = async () => {
   const _authData = _authCache.get(CLIENT_ID);
@@ -42,7 +40,7 @@ export const getAuthToken = async () => {
       tokenFetchTime: _authData.fetchTime,
     })
   ) {
-    const { data } = await axios.post<AuthReponseProps>(
+    const { data } = await axios.post<AuthReponse>(
       "https://accounts.spotify.com/api/token",
       {
         client_id: CLIENT_ID,
@@ -81,7 +79,7 @@ export const getArtistAlbums = async ({
   if (!artistId || !authToken || !tokenType) {
     return null;
   }
-  const { data } = await axios.get(
+  const { data } = await axios.get<AlbumData>(
     `https://api.spotify.com/v1/artists/${artistId}/albums`,
     {
       headers: {

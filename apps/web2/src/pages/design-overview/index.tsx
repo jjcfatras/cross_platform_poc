@@ -23,11 +23,9 @@ const DesignOverview = () => {
 
   return (
     <Screen>
-      <Container hasHeader={false}>
+      <Container>
         <View style={[styles.row, { justifyContent: "center" }]}>
-          <View style={styles.headerLeft}>
-            <BackButton />
-          </View>
+          <BackButton style={styles.headerLeft} />
           <Text style={styles.header} type="h1">
             Design Overview
           </Text>

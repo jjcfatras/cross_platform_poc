@@ -18,12 +18,12 @@ export const Screen = ({ children, style, ...rest }: ScreenProps) => {
 const styles = StyleSheet.create((theme) => ({
   children: {
     marginTop: 100 + theme.spacing[4],
+    padding: theme.spacing[0],
   },
   screen: {
     _web: {
       _classNames: "screen",
     },
-    backgroundColor: theme.colors.background,
     flex: 1,
   },
 }));

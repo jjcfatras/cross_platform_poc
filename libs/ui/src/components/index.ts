@@ -8,6 +8,7 @@ export * from "./Header";
 export * from "./Image";
 export * from "./MenuButton";
 export * from "./Screen";
+export * from "./Spinner";
 export * from "./StatusBar";
 export * from "./Text";
 export * from "./TextLink";

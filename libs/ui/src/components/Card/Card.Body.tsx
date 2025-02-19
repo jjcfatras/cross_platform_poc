@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native-unistyles";
 
 export type CardBodyProps = ViewProps;
 
-export const CardBody = ({ children, ...rest }: CardBodyProps) => (
-  <View style={styles.body} {...rest}>
+export const CardBody = ({ children, style, ...rest }: CardBodyProps) => (
+  <View style={[styles.body, style]} {...rest}>
     {children}
   </View>
 );
@@ -12,6 +12,8 @@ export const CardBody = ({ children, ...rest }: CardBodyProps) => (
 const styles = StyleSheet.create((theme) => ({
   body: {
     alignItems: "center",
-    padding: theme.spacing[1],
+    flex: 1,
+    justifyContent: "center",
+    padding: theme.spacing[0],
   },
 }));

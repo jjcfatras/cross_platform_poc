@@ -3,12 +3,7 @@ import { StyleSheet } from "react-native-unistyles";
 
 export type ContainerProps = ViewProps & { hasHeader?: boolean };
 
-export const Container = ({
-  children,
-  hasHeader = true,
-  style,
-  ...rest
-}: ContainerProps) => (
+export const Container = ({ children, style, ...rest }: ContainerProps) => (
   <View style={[styles.container, style]} {...rest}>
     {children}
   </View>
@@ -19,7 +14,6 @@ const styles = StyleSheet.create((theme) => ({
     _web: {
       _classNames: "container",
     },
-    backgroundColor: "transparent",
     marginHorizontal: "auto",
     maxWidth: {
       md: 720,

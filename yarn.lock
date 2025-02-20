@@ -2210,7 +2210,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/metro-runtime@npm:~4.0.0":
+"@expo/metro-runtime@npm:~4.0.1":
   version: 4.0.1
   resolution: "@expo/metro-runtime@npm:4.0.1"
   peerDependencies:
@@ -2381,7 +2381,7 @@ __metadata:
     "@eslint/js": "npm:^9.8.0"
     "@expo/cli": "npm:~0.21.8"
     "@expo/metro-config": "npm:~0.19.4"
-    "@expo/metro-runtime": "npm:~4.0.0"
+    "@expo/metro-runtime": "npm:~4.0.1"
     "@expo/next-adapter": "npm:^6.0.0"
     "@nx/eslint": "npm:20.3.2"
     "@nx/eslint-plugin": "npm:20.3.2"

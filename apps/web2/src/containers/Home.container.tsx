@@ -1,28 +1,23 @@
 import { View } from "react-native";
-import useSWR from "swr";
 
-import { getArtistAlbums, getAuthToken } from "~/libs/backend/src/services";
 import { Spinner } from "~/libs/ui/src/components";
+import { useArtistAlbums, useAuthToken } from "~/libs/utils/src/hooks";
 
 import { HomeComponent } from "../components/Home.component";
 
 export const HomeContainer = () => {
-  const { data: tokenData } = useSWR("/api/token", getAuthToken);
-  const { data: albumData, isLoading } = useSWR(
-    tokenData
-      ? {
-          artistId: "3WrFJ7ztbogyGnTHbHJFl2",
-          authToken: tokenData?.access_token,
-          tokenType: tokenData?.token_type,
-        }
-      : null,
-    getArtistAlbums,
-  );
+  const { data: tokenData, isLoading: isTokenLoading } = useAuthToken();
+
+  const { data: albumData, isLoading: isDataLoading } = useArtistAlbums({
+    accessToken: tokenData?.access_token,
+    artistId: "3WrFJ7ztbogyGnTHbHJFl2",
+    tokenType: tokenData?.token_type,
+  });
 
   console.log(JSON.stringify({ tokenData }, null, "\t"));
   console.log(JSON.stringify({ test: albumData?.items }, null, "\t"));
 
-  while (isLoading) {
+  while (isTokenLoading || isDataLoading) {
     return (
       <View
         style={{

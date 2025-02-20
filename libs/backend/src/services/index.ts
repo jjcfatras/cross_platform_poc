@@ -1,23 +1,11 @@
 import axios from "axios";
 
-import { isNumber } from "~/libs/utils/src/helpers";
-
 import { API_BUFFER, CLIENT_ID, CLIENT_SECRET } from "../constants";
-import type { AlbumData } from "../types";
+import type { AlbumData, AuthCache, AuthReponse } from "../types";
 
-type AuthCache = {
-  data: AuthReponse;
-  duration: number | undefined;
-  fetchTime: number;
-};
+const isNumber = (arg: unknown): arg is number => typeof arg === "number";
 
-type AuthReponse = {
-  access_token: string;
-  expires_in: number;
-  token_type: "Bearer";
-};
-
-export const isTokenExpired = ({
+const isTokenExpired = ({
   tokenDuration,
   tokenFetchTime,
 }: {

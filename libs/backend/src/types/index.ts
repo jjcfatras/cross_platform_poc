@@ -37,6 +37,18 @@ export type Artist = {
   uri: string;
 };
 
+export type AuthCache = {
+  data: AuthReponse;
+  duration: number | undefined;
+  fetchTime: number;
+};
+
+export type AuthReponse = {
+  access_token: string;
+  expires_in: number;
+  token_type: "Bearer";
+};
+
 // Types for external URLs
 export type ExternalUrls = {
   spotify: string;

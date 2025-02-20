@@ -11,13 +11,10 @@ export type StatusBarProps = ExpoStatusBarProps & {
   type?: "filled" | "transparent";
 };
 
-export const StatusBar = ({
-  type = "transparent",
-  ...rest
-}: StatusBarProps) => {
+export const StatusBar = () => {
   return (
     <View style={styles.statusBar}>
-      <UniStatusBar style={"inverted"} {...rest} />
+      <UniStatusBar style={"inverted"} />
     </View>
   );
 };

@@ -6,20 +6,13 @@ import {
 import { StyleSheet, withUnistyles } from "react-native-unistyles";
 
 import { Header } from "../Header";
-import { type StatusBarProps, StatusBar } from "../StatusBar";
+import { StatusBar } from "../StatusBar";
 
-export type ScreenProps = SafeAreaViewProps & {
-  statusBarProps?: StatusBarProps;
-};
+export type ScreenProps = SafeAreaViewProps;
 
 const UniSafeAreaView = withUnistyles(SafeAreaView);
 
-export const Screen = ({
-  children,
-  statusBarProps,
-  style,
-  ...rest
-}: ScreenProps) => {
+export const Screen = ({ children, style, ...rest }: ScreenProps) => {
   console.log("Mobile Screen");
   return (
     <UniSafeAreaView
@@ -27,7 +20,7 @@ export const Screen = ({
       style={[styles.screen, style]}
       {...rest}
     >
-      <StatusBar {...statusBarProps} />
+      <StatusBar />
       <View style={styles.children}>{children}</View>
       <Header style={styles.header} type="mobile" />
     </UniSafeAreaView>

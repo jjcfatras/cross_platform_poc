@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native-unistyles";
 
 export type CardBaseProps = ViewProps;
 
-export const CardBase = ({ children, ...rest }: CardBaseProps) => (
-  <View style={styles.card} {...rest}>
+export const CardBase = ({ children, style, ...rest }: CardBaseProps) => (
+  <View style={[styles.card, style]} {...rest}>
     {children}
   </View>
 );

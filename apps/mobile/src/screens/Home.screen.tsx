@@ -7,7 +7,7 @@ export const HomeScreen = () => {
   const scrollViewRef = useRef<null | ScrollView>(null);
 
   return (
-    <Screen statusBarProps={{ type: "filled" }}>
+    <Screen>
       <ScrollView
         ref={(ref) => {
           scrollViewRef.current = ref;

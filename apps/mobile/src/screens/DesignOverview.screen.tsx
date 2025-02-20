@@ -1,4 +1,4 @@
-import { ScrollView, View } from "react-native";
+import { Appearance, ScrollView, View } from "react-native";
 import {
   StyleSheet,
   UnistylesRuntime,
@@ -38,6 +38,7 @@ export const DesignOverviewScreen = () => {
                 onPress={() => {
                   UnistylesRuntime.setAdaptiveThemes(false);
                   UnistylesRuntime.setTheme("dark");
+                  Appearance.setColorScheme("dark");
                 }}
               >
                 dark
@@ -46,6 +47,7 @@ export const DesignOverviewScreen = () => {
                 onPress={() => {
                   UnistylesRuntime.setAdaptiveThemes(false);
                   UnistylesRuntime.setTheme("light");
+                  Appearance.setColorScheme("light");
                 }}
               >
                 light

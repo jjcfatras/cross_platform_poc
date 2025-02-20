@@ -13,9 +13,10 @@ const styles = StyleSheet.create((theme) => ({
       _classNames: "grid",
       display: "grid",
       gridTemplateColumns: {
-        [mq.only.width("lg")]: "repeat(3, 1fr)",
+        [mq.only.width("lg", "xxl")]: "repeat(3, 1fr)",
         [mq.only.width("md", "lg")]: "repeat(2, 1fr)",
         [mq.only.width("xs", "md")]: "1fr",
+        [mq.only.width("xxl")]: "repeat(4, 1fr)",
       } as unknown as string,
     },
     flexDirection: {

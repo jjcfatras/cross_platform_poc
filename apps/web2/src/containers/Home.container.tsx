@@ -14,8 +14,8 @@ export const HomeContainer = () => {
     tokenType: tokenData?.token_type,
   });
 
-  console.log(JSON.stringify({ tokenData }, null, "\t"));
-  console.log(JSON.stringify({ test: albumData?.items }, null, "\t"));
+  console.log(JSON.stringify({ token: tokenData?.access_token }, null, "\t"));
+  console.log(JSON.stringify({ albums: albumData?.items }, null, "\t"));
 
   while (isTokenLoading || isDataLoading) {
     return (

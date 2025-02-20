@@ -24,7 +24,12 @@ const DesignOverviewScreen = () => {
   return (
     <Screen>
       <Container>
-        <View style={[styles.row, { justifyContent: "center" }]}>
+        <View
+          style={[
+            styles.row,
+            { justifyContent: "center", marginTop: theme.spacing[4] },
+          ]}
+        >
           <BackButton style={styles.headerLeft} />
           <Text style={styles.header} type="h1">
             Design Overview
@@ -75,7 +80,10 @@ const DesignOverviewScreen = () => {
           <Card.Body>
             <Grid>
               {Object.keys(theme["sizing"]).map((size) => (
-                <View key={size} style={styles.row}>
+                <View
+                  key={size}
+                  style={[styles.row, { justifyContent: "space-evenly" }]}
+                >
                   <Text>
                     {`${
                       theme["sizing"][
@@ -102,7 +110,10 @@ const DesignOverviewScreen = () => {
           <Card.Body>
             <Grid>
               {Object.keys(theme["colors"]).map((color) => (
-                <View key={color} style={styles.row}>
+                <View
+                  key={color}
+                  style={[styles.row, { justifyContent: "space-evenly" }]}
+                >
                   <Text>{`${color}: `}</Text>
                   <View
                     style={[

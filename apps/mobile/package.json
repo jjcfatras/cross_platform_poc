@@ -43,7 +43,9 @@
     "react-native-safe-area-context": "*",
     "expo-status-bar": "*",
     "expo-system-ui": "*",
-    "@expo/metro-runtime": "*"
+    "@expo/metro-runtime": "*",
+    "swr": "*",
+    "@react-native-community/netinfo": "*"
   },
   "scripts": {
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/mobile",

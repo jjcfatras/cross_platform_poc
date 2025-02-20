@@ -29,8 +29,9 @@ export const Screen = ({ children, style, ...rest }: ScreenProps) => {
 
 const styles = StyleSheet.create((theme, rt) => ({
   children: {
-    marginTop: rt.insets.top + theme.spacing[4],
     padding: theme.spacing[0],
+    paddingBottom: rt.insets.bottom,
+    paddingTop: rt.insets.top,
   },
   header: {
     marginTop: rt.statusBar.height,

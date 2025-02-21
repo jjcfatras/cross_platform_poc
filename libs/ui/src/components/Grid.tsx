@@ -12,12 +12,7 @@ const styles = StyleSheet.create((theme) => ({
     _web: {
       _classNames: "grid",
       display: "grid",
-      gridTemplateColumns: {
-        [mq.only.width("lg", "xxl")]: "repeat(3, 1fr)",
-        [mq.only.width("md", "lg")]: "repeat(2, 1fr)",
-        [mq.only.width("xs", "md")]: "1fr",
-        [mq.only.width("xxl")]: "repeat(4, 1fr)",
-      } as unknown as string,
+      gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
     },
     flexDirection: {
       [mq.only.width("md")]: "row",

@@ -1,4 +1,4 @@
-import { palette, sizing, spacing } from "./_constants";
+import { fontSizing, palette, sizing, spacing } from "./_constants";
 
 export const lightTheme = {
   colors: {
@@ -14,6 +14,7 @@ export const lightTheme = {
     transparent: palette.transparent,
     white: palette.base100,
   },
+  fontSizing,
   isDark: false,
   sizing,
   spacing,
@@ -33,6 +34,7 @@ export const darkTheme = {
     transparent: palette.transparent,
     white: palette.base100,
   },
+  fontSizing,
   isDark: true,
   sizing,
   spacing,

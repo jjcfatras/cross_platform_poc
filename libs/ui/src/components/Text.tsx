@@ -1,6 +1,8 @@
 import { type TextProps as RNTextProps, Text as RNText } from "react-native";
 import { type UnistylesVariants, StyleSheet } from "react-native-unistyles";
 
+import { pxToRem } from "../utils";
+
 export type TextProps = RNTextProps & UnistylesVariants<typeof styles>;
 
 export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
@@ -15,7 +17,6 @@ export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
 const styles = StyleSheet.create((theme) => ({
   text: {
     fontFamily: "Roboto",
-    fontSize: theme.sizing[4],
     variants: {
       color: {
         black: {
@@ -39,28 +40,51 @@ const styles = StyleSheet.create((theme) => ({
           fontWeight: "bold",
         },
         default: {
-          fontSize: theme.sizing[4],
+          _web: {
+            fontSize: pxToRem(theme.fontSizing[4]),
+          },
+          fontSize: theme.fontSizing[4],
         },
         h1: {
-          fontSize: theme.sizing[8],
+          _web: {
+            fontSize: pxToRem(theme.fontSizing[8]),
+          },
+          fontSize: theme.fontSizing[8],
           fontWeight: "bold",
         },
         h2: {
-          fontSize: theme.sizing[7],
+          _web: {
+            fontSize: pxToRem(theme.fontSizing[7]),
+          },
+          fontSize: theme.fontSizing[7],
           fontWeight: "bold",
         },
         h3: {
-          fontSize: theme.sizing[6],
+          _web: {
+            fontSize: pxToRem(theme.fontSizing[6]),
+          },
+          fontSize: theme.fontSizing[6],
           fontWeight: "bold",
         },
         h4: {
-          fontSize: theme.sizing[5],
+          _web: {
+            fontSize: pxToRem(theme.fontSizing[5]),
+          },
+          fontSize: theme.fontSizing[5],
           fontWeight: "bold",
         },
         italic: {
+          _web: {
+            fontSize: pxToRem(theme.fontSizing[4]),
+          },
           fontFamily: "Roboto-Italic",
+          fontSize: theme.fontSizing[4],
         },
         link: {
+          _web: {
+            fontSize: pxToRem(theme.fontSizing[4]),
+          },
+          fontSize: theme.fontSizing[4],
           textDecorationLine: "underline",
         },
       },

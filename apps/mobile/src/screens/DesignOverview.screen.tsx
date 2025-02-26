@@ -2,13 +2,13 @@ import { ScrollView } from "react-native";
 
 import { Container, Screen } from "~/libs/ui/src/components";
 
-import { DesignOverviewComponent } from "../component/DesignOverview.component";
+import { DesignOverviewContainer } from "../containers/DesignOverview.container";
 
 export const DesignOverviewScreen = () => (
   <Screen>
     <ScrollView>
       <Container>
-        <DesignOverviewComponent />
+        <DesignOverviewContainer />
       </Container>
     </ScrollView>
   </Screen>

@@ -1,11 +1,11 @@
 import { Container, Screen } from "~/libs/ui/src/components";
 
-import { DesignOverviewComponent } from "../components/DesignOverview.component";
+import { DesignOverviewContainer } from "../containers/DesignOverview.container";
 
 export const DesignOverviewScreen = () => (
   <Screen>
     <Container>
-      <DesignOverviewComponent />
+      <DesignOverviewContainer />
     </Container>
   </Screen>
 );

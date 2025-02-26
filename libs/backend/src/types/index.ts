@@ -37,12 +37,14 @@ export type Artist = {
   uri: string;
 };
 
+// Types for auth cache
 export type AuthCache = {
   data: AuthReponse;
   duration: number | undefined;
   fetchTime: number;
 };
 
+// Types for auth api response
 export type AuthReponse = {
   access_token: string;
   expires_in: number;
@@ -59,9 +61,4 @@ export type SpotifyImage = {
   height: number;
   url: string;
   width: number;
-};
-
-// Main response type
-export type SpotifyResponse = {
-  albumData: AlbumData;
 };

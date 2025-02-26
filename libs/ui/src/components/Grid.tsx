@@ -24,5 +24,6 @@ const styles = StyleSheet.create((theme) => ({
     },
     gap: theme.spacing[4],
     justifyContent: "center",
+    width: "100%",
   },
 }));

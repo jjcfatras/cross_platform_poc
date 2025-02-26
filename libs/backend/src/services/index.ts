@@ -53,7 +53,7 @@ export const getAuthToken = async () => {
   return _authData.data;
 };
 
-type getArtistAlbumsProps = {
+export type getArtistAlbumsProps = {
   artistId: string | undefined;
   authToken: string | undefined;
   tokenType: "Bearer" | undefined;

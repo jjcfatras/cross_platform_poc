@@ -16,6 +16,8 @@ yarn nx run web2:dev
 
 ## Using Mobile
 
+#### Before you start be sure to follow setup instructions at https://docs.expo.dev/get-started/set-up-your-environment for Android and iOS using a development build. You will need Xcode and Android Studio installed to create builds.
+
 ### Create Development Build
 
 ```sh

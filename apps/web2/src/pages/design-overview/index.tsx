@@ -1,4 +1,4 @@
-import DesignOverviewScreen from "../../screens/DesignOverview.screen";
+import { DesignOverviewScreen } from "../../screens/DesignOverview.screen";
 
 const DesignOverview = () => <DesignOverviewScreen />;
 

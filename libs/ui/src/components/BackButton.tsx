@@ -1,7 +1,7 @@
 "use client";
 
 import { type TouchableOpacityProps, TouchableOpacity } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 import { useRouter } from "solito/navigation";
 
 import { BackArrow } from "~/libs/assets/src/icons/BackArrow";
@@ -11,6 +11,7 @@ export type BackButtonProps = Omit<TouchableOpacityProps, "children"> & {
 };
 
 export const BackButton = ({ size = 50, style, ...rest }: BackButtonProps) => {
+  const { styles } = useStyles(styleSheet);
   const { back } = useRouter();
 
   const _handlePress = () => back();
@@ -26,7 +27,7 @@ export const BackButton = ({ size = 50, style, ...rest }: BackButtonProps) => {
   );
 };
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   arrow: (size: number) => ({
     color: theme.colors.inverse,
     height: size,

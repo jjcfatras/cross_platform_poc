@@ -2515,7 +2515,7 @@ __metadata:
     react-native-screens: "npm:~4.4.0"
     react-native-svg: "npm:~15.8.0"
     react-native-svg-transformer: "npm:~1.5.0"
-    react-native-unistyles: "npm:3.0.0-beta.7"
+    react-native-unistyles: "npm:^2.30.0"
     react-native-web: "npm:~0.19.13"
     react-test-renderer: "npm:~18.3.1"
     solito: "npm:^4.3.0"
@@ -16242,16 +16242,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-unistyles@npm:3.0.0-beta.7":
-  version: 3.0.0-beta.7
-  resolution: "react-native-unistyles@npm:3.0.0-beta.7"
+"react-native-unistyles@npm:^2.30.0":
+  version: 2.30.0
+  resolution: "react-native-unistyles@npm:2.30.0"
   peerDependencies:
     "@react-native/normalize-colors": "*"
     react: "*"
-    react-native: ">=0.76.0"
-    react-native-edge-to-edge: "*"
-    react-native-nitro-modules: "*"
-  checksum: 10c0/a964399539b6d7c6dcc2517584b4d8ec8d971a129aa27d9e8005d841df2ad3af56f53ae6fd09e559083986dd13e910f6b7457f5bfb0737aee472921da01a64e6
+    react-native: "*"
+    react-native-macos: "*"
+    react-native-web: "*"
+    react-native-windows: "*"
+  peerDependenciesMeta:
+    react-native-macos:
+      optional: true
+    react-native-web:
+      optional: true
+    react-native-windows:
+      optional: true
+  checksum: 10c0/012e976181e484b862de44bb3c5dedf2465c0cb6c6f373198e84dd796f75ea9efaecfafc785aaf1b5b5018b682226e2009495ea03fa4e72ae9411914c9bb8934
   languageName: node
   linkType: hard
 

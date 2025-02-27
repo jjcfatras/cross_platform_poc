@@ -1,3 +1,5 @@
+"use client";
+
 import { View } from "react-native";
 
 import { Spinner } from "~/libs/ui/src/components";

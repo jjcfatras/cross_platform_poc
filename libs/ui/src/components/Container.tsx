@@ -1,15 +1,20 @@
+"use client";
+
 import { type ViewProps, View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 
 export type ContainerProps = ViewProps & { hasHeader?: boolean };
 
-export const Container = ({ children, style, ...rest }: ContainerProps) => (
-  <View style={[styles.container, style]} {...rest}>
-    {children}
-  </View>
-);
+export const Container = ({ children, style, ...rest }: ContainerProps) => {
+  const { styles } = useStyles(styleSheet);
+  return (
+    <View style={[styles.container, style]} {...rest}>
+      {children}
+    </View>
+  );
+};
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   container: {
     _web: {
       _classNames: "container",

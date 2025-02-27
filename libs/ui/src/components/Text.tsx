@@ -1,12 +1,18 @@
+"use client";
+
 import { type TextProps as RNTextProps, Text as RNText } from "react-native";
-import { type UnistylesVariants, StyleSheet } from "react-native-unistyles";
+import {
+  type UnistylesVariants,
+  createStyleSheet,
+  useStyles,
+} from "react-native-unistyles";
 
 import { pxToRem } from "../utils";
 
-export type TextProps = RNTextProps & UnistylesVariants<typeof styles>;
+export type TextProps = RNTextProps & UnistylesVariants<typeof styleSheet>;
 
 export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
-  styles.useVariants({ color, type });
+  const { styles } = useStyles(styleSheet, { color, type });
   return (
     <RNText style={[styles.text, style]} {...rest}>
       {children}
@@ -14,7 +20,7 @@ export const Text = ({ children, color, style, type, ...rest }: TextProps) => {
   );
 };
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   text: {
     fontFamily: "Roboto",
     variants: {

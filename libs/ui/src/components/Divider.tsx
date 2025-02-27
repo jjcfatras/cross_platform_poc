@@ -1,13 +1,18 @@
+"use client";
+
 import { View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 
-export const Divider = () => <View style={styles.divider} />;
+export const Divider = () => {
+  const { styles } = useStyles(styleSheet);
+  return <View style={styles.divider} />;
+};
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   divider: {
     alignSelf: "stretch",
     backgroundColor: theme.colors.divider,
-    height: StyleSheet.hairlineWidth,
+    height: 1,
     marginVertical: theme.spacing[4],
   },
 }));

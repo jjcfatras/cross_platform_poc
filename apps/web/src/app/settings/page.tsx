@@ -1,7 +1,11 @@
 "use client";
 
 import { View } from "react-native";
-import { StyleSheet, UnistylesRuntime } from "react-native-unistyles";
+import {
+  createStyleSheet,
+  UnistylesRuntime,
+  useStyles,
+} from "react-native-unistyles";
 
 import {
   BackButton,
@@ -44,6 +48,7 @@ import {
 // };
 
 const SettingsPage = () => {
+  const { styles } = useStyles(styleSheet);
   // const [theme, dispatch] = useReducer(_reducer, "system");
 
   console.log({ currentTheme: UnistylesRuntime.colorScheme });
@@ -72,7 +77,7 @@ const SettingsPage = () => {
 
 export default SettingsPage;
 
-const styles = StyleSheet.create(() => ({
+const styleSheet = createStyleSheet(() => ({
   header: {
     textAlign: "center",
   },

@@ -1,4 +1,6 @@
-import { StyleSheet } from "react-native-unistyles";
+"use client";
+
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 
 import { type TextProps, Text } from "../Text";
 
@@ -8,13 +10,21 @@ export const CardSubTitle = ({
   children,
   style,
   ...rest
-}: CardSubTitleProps) => (
-  <Text color="secondary" style={[styles.subTitle, style]} type="h4" {...rest}>
-    {children}
-  </Text>
-);
+}: CardSubTitleProps) => {
+  const { styles } = useStyles(styleSheet);
+  return (
+    <Text
+      color="secondary"
+      style={[styles.subTitle, style]}
+      type="h4"
+      {...rest}
+    >
+      {children}
+    </Text>
+  );
+};
 
-const styles = StyleSheet.create({
+const styleSheet = createStyleSheet({
   subTitle: {
     textAlign: "center",
   },

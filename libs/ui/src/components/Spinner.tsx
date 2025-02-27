@@ -1,12 +1,11 @@
-import { type ActivityIndicatorProps, ActivityIndicator } from "react-native";
-import { withUnistyles } from "react-native-unistyles";
+"use client";
 
-const UniSpinner = withUnistyles(ActivityIndicator, (theme) => ({
-  color: theme.colors.brand,
-}));
+import { type ActivityIndicatorProps, ActivityIndicator } from "react-native";
+import { useStyles } from "react-native-unistyles";
 
 export type SpinnerProps = Omit<ActivityIndicatorProps, "color">;
 
 export const Spinner = (props: SpinnerProps) => {
-  return <UniSpinner size={100} {...props} />;
+  const { theme } = useStyles();
+  return <ActivityIndicator color={theme.colors.brand} size={100} {...props} />;
 };

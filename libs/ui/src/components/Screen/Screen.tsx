@@ -1,9 +1,11 @@
+"use client";
+
 import { View } from "react-native";
 import {
   type SafeAreaViewProps,
   SafeAreaView,
 } from "react-native-safe-area-context";
-import { StyleSheet, withUnistyles } from "react-native-unistyles";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 
 import { HEADER_HEIGHT_MOBILE } from "../../constants";
 import { Header } from "../Header";
@@ -11,12 +13,11 @@ import { StatusBar } from "../StatusBar";
 
 export type ScreenProps = SafeAreaViewProps;
 
-const UniSafeAreaView = withUnistyles(SafeAreaView);
-
 export const Screen = ({ children, style, ...rest }: ScreenProps) => {
+  const { styles } = useStyles(styleSheet);
   console.log("Mobile Screen");
   return (
-    <UniSafeAreaView
+    <SafeAreaView
       edges={["bottom", "left", "right"]}
       style={[styles.screen, style]}
       {...rest}
@@ -24,11 +25,11 @@ export const Screen = ({ children, style, ...rest }: ScreenProps) => {
       <StatusBar />
       <View style={styles.children}>{children}</View>
       <Header style={styles.header} type="mobile" />
-    </UniSafeAreaView>
+    </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create((theme, rt) => ({
+const styleSheet = createStyleSheet((theme, rt) => ({
   children: {
     padding: theme.spacing[0],
     paddingBottom: rt.insets.bottom,

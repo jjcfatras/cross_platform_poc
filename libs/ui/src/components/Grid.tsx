@@ -1,13 +1,16 @@
+"use client";
+
 import { type ViewProps, View } from "react-native";
-import { mq, StyleSheet } from "react-native-unistyles";
+import { createStyleSheet, mq, useStyles } from "react-native-unistyles";
 
 export type GridProps = Pick<ViewProps, "children">;
 
-export const Grid = ({ children }: GridProps) => (
-  <View style={styles.grid}>{children}</View>
-);
+export const Grid = ({ children }: GridProps) => {
+  const { styles } = useStyles(styleSheet);
+  return <View style={styles.grid}>{children}</View>;
+};
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   grid: {
     _web: {
       _classNames: "grid",

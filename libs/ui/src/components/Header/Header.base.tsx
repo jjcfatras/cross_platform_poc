@@ -1,5 +1,7 @@
+"use client";
+
 import { View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 
 import { HEADER_HEIGHT_MOBILE, HEADER_HEIGHT_WEB } from "../../constants";
 import { type ContainerProps, Container } from "../Container";
@@ -24,27 +26,30 @@ export const HeaderBase = ({
   style,
   type,
   ...rest
-}: HeaderBaseProps) => (
-  <Container style={[styles.container, style]} {...rest}>
-    <View style={styles.header(type)}>
-      <Text color="inverse" type="h1">
-        Demo
-      </Text>
-      <MenuButton onPress={onPress} style={styles.headerRight} />
-    </View>
-    {isPressed && (
-      <View style={styles.subHeader}>
-        {LINKS.map((link) => (
-          <TextLink href={link.destination} key={link.label}>
-            {link.label}
-          </TextLink>
-        ))}
+}: HeaderBaseProps) => {
+  const { styles } = useStyles(styleSheet);
+  return (
+    <Container style={[styles.container, style]} {...rest}>
+      <View style={styles.header(type)}>
+        <Text color="inverse" type="h1">
+          Demo
+        </Text>
+        <MenuButton onPress={onPress} style={styles.headerRight} />
       </View>
-    )}
-  </Container>
-);
+      {isPressed && (
+        <View style={styles.subHeader}>
+          {LINKS.map((link) => (
+            <TextLink href={link.destination} key={link.label}>
+              {link.label}
+            </TextLink>
+          ))}
+        </View>
+      )}
+    </Container>
+  );
+};
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   container: {
     _web: {
       _classNames: "header",

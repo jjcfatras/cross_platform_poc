@@ -1,15 +1,20 @@
+"use client";
+
 import { type ViewProps, View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 
 export type CardBaseProps = ViewProps;
 
-export const CardBase = ({ children, style, ...rest }: CardBaseProps) => (
-  <View style={[styles.card, style]} {...rest}>
-    {children}
-  </View>
-);
+export const CardBase = ({ children, style, ...rest }: CardBaseProps) => {
+  const { styles } = useStyles(styleSheet);
+  return (
+    <View style={[styles.card, style]} {...rest}>
+      {children}
+    </View>
+  );
+};
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   card: {
     backgroundColor: theme.colors.background,
     borderColor: theme.colors.brand,

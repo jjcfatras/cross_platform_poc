@@ -23,6 +23,7 @@ const nextConfig = {
     "react-native-mmkv",
     "react-native-svg",
     "react-native-svg-transformer",
+    "react-native-unistyles",
   ],
   webpack: (config) => {
     config.resolve.alias = {

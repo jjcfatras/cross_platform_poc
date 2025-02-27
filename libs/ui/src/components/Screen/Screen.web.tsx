@@ -1,5 +1,7 @@
+"use client";
+
 import { type ViewProps, View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
+import { createStyleSheet, useStyles } from "react-native-unistyles";
 
 import { HEADER_HEIGHT_WEB } from "../../constants";
 import { Header } from "../Header";
@@ -7,6 +9,7 @@ import { Header } from "../Header";
 export type ScreenProps = ViewProps;
 
 export const Screen = ({ children, style, ...rest }: ScreenProps) => {
+  const { styles } = useStyles(styleSheet);
   console.log("Web Screen");
   return (
     <View style={[styles.screen, style]} {...rest}>
@@ -16,7 +19,7 @@ export const Screen = ({ children, style, ...rest }: ScreenProps) => {
   );
 };
 
-const styles = StyleSheet.create((theme) => ({
+const styleSheet = createStyleSheet((theme) => ({
   children: {
     padding: theme.spacing[0],
     paddingTop: HEADER_HEIGHT_WEB,

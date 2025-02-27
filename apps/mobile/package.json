@@ -45,7 +45,10 @@
     "expo-system-ui": "*",
     "@expo/metro-runtime": "*",
     "swr": "*",
-    "@react-native-community/netinfo": "*"
+    "@react-native-community/netinfo": "*",
+    "axios": "*",
+    "react-native-mmkv": "*",
+    "expo-splash-screen": "*"
   },
   "scripts": {
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/mobile",

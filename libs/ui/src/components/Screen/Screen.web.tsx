@@ -1,6 +1,7 @@
 import { type ViewProps, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
+import { HEADER_HEIGHT_WEB } from "../../constants";
 import { Header } from "../Header";
 
 export type ScreenProps = ViewProps;
@@ -18,12 +19,14 @@ export const Screen = ({ children, style, ...rest }: ScreenProps) => {
 const styles = StyleSheet.create((theme) => ({
   children: {
     padding: theme.spacing[0],
-    paddingTop: 100,
+    paddingTop: HEADER_HEIGHT_WEB,
   },
   screen: {
     _web: {
       _classNames: "screen",
+      overflow: "auto",
     },
+    backgroundColor: theme.colors.background,
     flex: 1,
   },
 }));

@@ -1,6 +1,7 @@
 import { View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
+import { HEADER_HEIGHT_MOBILE, HEADER_HEIGHT_WEB } from "../../constants";
 import { type ContainerProps, Container } from "../Container";
 import { MenuButton } from "../MenuButton";
 import { Text } from "../Text";
@@ -43,7 +44,7 @@ export const HeaderBase = ({
   </Container>
 );
 
-const styles = StyleSheet.create((theme, rt) => ({
+const styles = StyleSheet.create((theme) => ({
   container: {
     _web: {
       _classNames: "header",
@@ -59,7 +60,7 @@ const styles = StyleSheet.create((theme, rt) => ({
   header: (type: HeaderBaseProps["type"]) => ({
     alignItems: "center",
     flexDirection: "row",
-    height: type === "web" ? 100 : rt.insets.top,
+    height: type === "web" ? HEADER_HEIGHT_WEB : HEADER_HEIGHT_MOBILE,
     justifyContent: "center",
   }),
   headerRight: {

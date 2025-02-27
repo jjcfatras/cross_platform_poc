@@ -2510,12 +2510,12 @@ __metadata:
     react-native-dropdown-picker: "npm:^5.4.6"
     react-native-edge-to-edge: "npm:^1.4.3"
     react-native-mmkv: "npm:^3.2.0"
-    react-native-nitro-modules: "npm:^0.22.1"
+    react-native-nitro-modules: "npm:^0.24.1"
     react-native-safe-area-context: "npm:4.12.0"
     react-native-screens: "npm:~4.4.0"
     react-native-svg: "npm:~15.8.0"
     react-native-svg-transformer: "npm:~1.5.0"
-    react-native-unistyles: "npm:3.0.0-beta.7"
+    react-native-unistyles: "npm:3.0.0-beta.8"
     react-native-web: "npm:~0.19.13"
     react-test-renderer: "npm:~18.3.1"
     solito: "npm:^4.3.0"
@@ -16180,13 +16180,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-nitro-modules@npm:^0.22.1":
-  version: 0.22.1
-  resolution: "react-native-nitro-modules@npm:0.22.1"
+"react-native-nitro-modules@npm:^0.24.1":
+  version: 0.24.1
+  resolution: "react-native-nitro-modules@npm:0.24.1"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/1bba3b775631a8f4a4089e1bdb21a2f504a3b7cc0ad0b30d535b7b6ba51e65189e9e41667ab53119396666f3b545042b8e53215acc73ee3ff69745e28da5b2c4
+  checksum: 10c0/e6256441cfe22370d12928c07d28458366c32ab57045593a557d27f9abf94c2b161376ab8fbf9369695a56b88d2d236d11f6a8d87cf2ce582e15539bc327e0c0
   languageName: node
   linkType: hard
 
@@ -16242,16 +16242,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-unistyles@npm:3.0.0-beta.7":
-  version: 3.0.0-beta.7
-  resolution: "react-native-unistyles@npm:3.0.0-beta.7"
+"react-native-unistyles@npm:3.0.0-beta.8":
+  version: 3.0.0-beta.8
+  resolution: "react-native-unistyles@npm:3.0.0-beta.8"
   peerDependencies:
     "@react-native/normalize-colors": "*"
     react: "*"
     react-native: ">=0.76.0"
     react-native-edge-to-edge: "*"
     react-native-nitro-modules: "*"
-  checksum: 10c0/a964399539b6d7c6dcc2517584b4d8ec8d971a129aa27d9e8005d841df2ad3af56f53ae6fd09e559083986dd13e910f6b7457f5bfb0737aee472921da01a64e6
+  checksum: 10c0/de61ab4ee7e1fd0bd4066d804885ad8269c40fc00ee57a332f6c4ab7fa2ffa5a9aa0d5f3b47746a2466b4e60d775df0300d8e7b54a94829871be337ddce40081
   languageName: node
   linkType: hard
 

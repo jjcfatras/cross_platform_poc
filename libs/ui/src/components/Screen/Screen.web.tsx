@@ -26,7 +26,6 @@ const styles = StyleSheet.create((theme) => ({
       _classNames: "screen",
       overflow: "auto",
     },
-    backgroundColor: theme.colors.background,
     flex: 1,
   },
 }));

@@ -18,7 +18,6 @@ import { AppRegistry } from "react-native";
 const style = `
 html, body, #__next {
   -webkit-overflow-scrolling: touch;
-  background-color: var(--colors-background)
 }
 #__next {
   display: flex;

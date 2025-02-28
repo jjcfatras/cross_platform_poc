@@ -15,6 +15,7 @@ const styles = StyleSheet.create((theme) => ({
     borderColor: theme.colors.brand,
     borderRadius: theme.sizing[1],
     borderWidth: 2,
+    flex: 1,
     minWidth: 300,
     padding: theme.spacing[4],
   },

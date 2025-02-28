@@ -38,7 +38,6 @@ const styles = StyleSheet.create((theme, rt) => ({
     marginTop: rt.statusBar.height,
   },
   screen: {
-    backgroundColor: theme.colors.background,
     flex: 1,
   },
 }));

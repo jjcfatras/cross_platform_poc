@@ -11,5 +11,6 @@ export const palette = {
   semanticBad60: "hsl(0, 100%, 60%)",
   semanticGood25: "hsl(120, 100%, 25%)",
   semanticGood30: "hsl(120, 100%, 30%)",
+  shadow: "hsla(0,0%,0%,0.3)",
   transparent: "hsla(0,0%,0%,0)",
 } as const;

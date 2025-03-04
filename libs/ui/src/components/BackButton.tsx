@@ -6,6 +6,8 @@ import { useRouter } from "solito/navigation";
 
 import { BackArrow } from "~/libs/assets/src/icons/BackArrow";
 
+import { HOVER_OPACITY } from "../constants";
+
 export type BackButtonProps = Omit<TouchableOpacityProps, "children"> & {
   size?: number;
 };
@@ -33,6 +35,11 @@ const styles = StyleSheet.create((theme) => ({
     width: size,
   }),
   button: (size: number) => ({
+    _web: {
+      _hover: {
+        opacity: HOVER_OPACITY,
+      },
+    },
     backgroundColor: theme.colors.brand,
     borderRadius: size / 2,
     height: size,

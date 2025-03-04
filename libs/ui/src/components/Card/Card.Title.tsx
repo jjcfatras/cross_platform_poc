@@ -7,7 +7,7 @@ export type CardTitleProps = Omit<TextProps, "color" | "type">;
 
 export const CardTitle = ({ children, style, ...rest }: CardTitleProps) => (
   <View style={styles.container}>
-    <Text style={[styles.title, style]} type="h2" {...rest}>
+    <Text style={[styles.title, style]} type="h3" {...rest}>
       {children}
     </Text>
   </View>

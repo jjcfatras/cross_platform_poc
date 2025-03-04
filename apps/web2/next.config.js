@@ -30,8 +30,6 @@ const nextConfig = {
       ...(config.resolve.alias || {}),
       // Transform all direct `react-native` imports to `react-native-web`
       "react-native$": "react-native-web",
-      "react-native/Libraries/Image/AssetRegistry":
-        "react-native-web/dist/cjs/modules/AssetRegistry", // Fix for loading images in web builds with Expo-Image
     };
     config.resolve.extensions = [
       ".web.js",

@@ -27,32 +27,33 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
       ]}
     >
       <BackButton style={styles.headerLeft} />
-      <Text style={styles.header} type="h1">
+      <Text style={styles.header} type="h2">
         Design Overview
       </Text>
     </View>
-
     <Divider />
     <Card>
       <Card.Title>Theme</Card.Title>
       <Card.Divider />
-      <Card.Body style={[styles.row, { justifyContent: "space-evenly" }]}>
-        <Button
-          onPress={() => {
-            UnistylesRuntime.setAdaptiveThemes(false);
-            UnistylesRuntime.setTheme("dark");
-          }}
-        >
-          dark
-        </Button>
-        <Button
-          onPress={() => {
-            UnistylesRuntime.setAdaptiveThemes(false);
-            UnistylesRuntime.setTheme("light");
-          }}
-        >
-          light
-        </Button>
+      <Card.Body>
+        <View style={styles.rowButton}>
+          <Button
+            onPress={() => {
+              UnistylesRuntime.setAdaptiveThemes(false);
+              UnistylesRuntime.setTheme("dark");
+            }}
+          >
+            dark
+          </Button>
+          <Button
+            onPress={() => {
+              UnistylesRuntime.setAdaptiveThemes(false);
+              UnistylesRuntime.setTheme("light");
+            }}
+          >
+            light
+          </Button>
+        </View>
       </Card.Body>
     </Card>
     <Divider />
@@ -64,9 +65,12 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
         <Text type="h2">h2: Hello World</Text>
         <Text type="h3">h3: Hello World</Text>
         <Text type="h4">h4: Hello World</Text>
+        <Text type="h5">h5: Hello World</Text>
+        <Text type="h6">h6: Hello World</Text>
         <Text>default: Hello World</Text>
         <Text type="italic">italic: Hello World</Text>
         <Text type="link">link: Hello World</Text>
+        <Text type="strike">strike: Hello World</Text>
       </Card.Body>
     </Card>
     <Divider />
@@ -76,10 +80,7 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
       <Card.Body>
         <Grid>
           {Object.keys(theme["sizing"]).map((size) => (
-            <View
-              key={size}
-              style={[styles.row, { justifyContent: "space-evenly" }]}
-            >
+            <View key={size} style={styles.row}>
               <Text>
                 {`${
                   theme["sizing"][
@@ -106,10 +107,7 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
       <Card.Body>
         <Grid>
           {Object.keys(theme["colors"]).map((color) => (
-            <View
-              key={color}
-              style={[styles.row, { justifyContent: "space-evenly" }]}
-            >
+            <View key={color} style={styles.row}>
               <Text>{`${color}: `}</Text>
               <View
                 style={[
@@ -144,6 +142,12 @@ const styles = StyleSheet.create((theme) => ({
   row: {
     alignItems: "center",
     flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
+  rowButton: {
+    flex: 1,
+    flexDirection: "row",
+    gap: theme.spacing[4],
   },
   sizeBlock: (size: number) => ({
     alignItems: "center",

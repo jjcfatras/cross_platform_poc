@@ -27,7 +27,7 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
       ]}
     >
       <BackButton style={styles.headerLeft} />
-      <Text style={styles.header} type="h1">
+      <Text style={styles.header} type="h2">
         Design Overview
       </Text>
     </View>
@@ -65,9 +65,12 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
         <Text type="h2">h2: Hello World</Text>
         <Text type="h3">h3: Hello World</Text>
         <Text type="h4">h4: Hello World</Text>
+        <Text type="h5">h5: Hello World</Text>
+        <Text type="h6">h6: Hello World</Text>
         <Text>default: Hello World</Text>
         <Text type="italic">italic: Hello World</Text>
         <Text type="link">link: Hello World</Text>
+        <Text type="strike">strike: Hello World</Text>
       </Card.Body>
     </Card>
     <Divider />

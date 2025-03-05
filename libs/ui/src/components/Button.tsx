@@ -9,7 +9,7 @@ export type ButtonProps = Omit<TouchableOpacityProps, "children"> &
   Pick<TextProps, "children">;
 
 export const Button = ({ children, style, ...rest }: ButtonProps) => (
-  <TouchableOpacity style={styles.button} {...rest}>
+  <TouchableOpacity style={[styles.button, style]} {...rest}>
     <Text color="inverse" type="bold">
       {children}
     </Text>

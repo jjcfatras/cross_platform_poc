@@ -9,6 +9,7 @@ import {
   BackButton,
   Button,
   Card,
+  DemoForm,
   Divider,
   Grid,
   Text,
@@ -102,7 +103,7 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
     </Card>
     <Divider />
     <Card>
-      <Card.Title>colors</Card.Title>
+      <Card.Title>Colors</Card.Title>
       <Card.Divider />
       <Card.Body>
         <Grid>
@@ -121,6 +122,14 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
         </Grid>
       </Card.Body>
     </Card>
+    <Divider />
+    <Card>
+      <Card.Title>Forms</Card.Title>
+      <Card.Divider />
+      <Card.Body>
+        <DemoForm />
+      </Card.Body>
+    </Card>
   </>
 );
 
@@ -128,6 +137,7 @@ const styles = StyleSheet.create((theme) => ({
   colorBlock: (color: string) => ({
     backgroundColor: color,
     borderColor: theme.colors.brand,
+    borderRadius: 8,
     borderWidth: 2,
     height: 50,
     width: 50,
@@ -152,6 +162,7 @@ const styles = StyleSheet.create((theme) => ({
   sizeBlock: (size: number) => ({
     alignItems: "center",
     backgroundColor: theme.colors.brand,
+    borderRadius: 8,
     height: size,
     justifyContent: "center",
     width: size,

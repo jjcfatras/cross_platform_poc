@@ -9,6 +9,7 @@ import {
   BackButton,
   Button,
   Card,
+  DemoForm,
   Divider,
   Grid,
   Text,
@@ -125,6 +126,14 @@ export const DesignOverviewComponent = ({ theme }: DOComponentProps) => (
             </View>
           ))}
         </Grid>
+      </Card.Body>
+    </Card>
+    <Divider />
+    <Card>
+      <Card.Title>Forms</Card.Title>
+      <Card.Divider />
+      <Card.Body>
+        <DemoForm />
       </Card.Body>
     </Card>
   </>

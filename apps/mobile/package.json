@@ -48,7 +48,9 @@
     "@react-native-community/netinfo": "*",
     "axios": "*",
     "react-native-mmkv": "*",
-    "expo-splash-screen": "*"
+    "expo-splash-screen": "*",
+    "formik": "*",
+    "yup": "*"
   },
   "scripts": {
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/mobile",

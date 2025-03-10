@@ -12,4 +12,5 @@ export * from "./Screen";
 export * from "./Spinner";
 export * from "./StatusBar";
 export * from "./Text";
+export * from "./TextInput";
 export * from "./TextLink";

@@ -2,16 +2,15 @@ import { object, string } from "yup";
 
 const FIRST_LAST_NAME_REGEXP = /[a-zA-ZÀ-ÿ.,'’ -]/;
 
-enum ERROR_TYPE {
+enum ERRORS {
   INVALID = "invalid",
   LONG = "too long",
   REQUIRED = "required",
   SHORT = "too short",
 }
 
-const _getErrorMessage =
-    (fieldName: string) => (error: keyof typeof ERROR_TYPE) =>
-      `${fieldName} is ${ERROR_TYPE[error]}!`,
+const _getErrorMessage = (fieldName: string) => (error: keyof typeof ERRORS) =>
+    `${fieldName} is ${ERRORS[error]}!`,
   _getEmailError = _getErrorMessage("Email"),
   _getFirstNameError = _getErrorMessage("First Name"),
   _getLastNameError = _getErrorMessage("Last Name"),

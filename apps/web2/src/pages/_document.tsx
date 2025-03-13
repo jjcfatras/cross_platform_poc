@@ -9,6 +9,10 @@ import Document, {
 } from "next/document";
 import { Children } from "react";
 import { AppRegistry } from "react-native";
+import {
+  getServerUnistyles,
+  resetServerUnistyles,
+} from "react-native-unistyles/server";
 
 // Follows the setup for react-native-web:
 // https://necolas.github.io/react-native-web/docs/setup/#root-element
@@ -44,13 +48,18 @@ export default class MyDocument extends Document {
     AppRegistry.registerComponent("main", () => Main);
     //@ts-expect-error AppRegistry is missing type information
     const { getStyleElement } = AppRegistry.getApplication("main");
+
     const page = await renderPage();
+
+    resetServerUnistyles();
+
     const styles = [
       <style
         dangerouslySetInnerHTML={{ __html: style }}
         key="react-native-style"
       />,
       getStyleElement(),
+      getServerUnistyles(),
     ];
     return { ...page, styles: Children.toArray(styles) };
   }

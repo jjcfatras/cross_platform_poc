@@ -66,7 +66,9 @@ export const DemoForm = () => (
             value={values.email}
           />
         </View>
-        <Button onPress={() => handleSubmit()}>Submit</Button>
+        <Button onPress={() => handleSubmit()} style={styles.submitButton}>
+          Submit
+        </Button>
       </View>
     )}
   </Formik>

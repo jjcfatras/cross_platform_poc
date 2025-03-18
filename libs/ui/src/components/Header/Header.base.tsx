@@ -1,4 +1,3 @@
-import { View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
 import { HEADER_HEIGHT_MOBILE, HEADER_HEIGHT_WEB } from "../../constants";
@@ -6,6 +5,7 @@ import { type ContainerProps, Container } from "../Container";
 import { MenuButton } from "../MenuButton";
 import { Text } from "../Text";
 import { TextLink } from "../TextLink";
+import { View } from "../View";
 
 const LINKS = [
   { destination: "/design-overview", label: "Design Overview" },

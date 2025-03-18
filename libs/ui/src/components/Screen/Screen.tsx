@@ -1,4 +1,3 @@
-import { View } from "react-native";
 import {
   type SafeAreaViewProps,
   SafeAreaView,
@@ -8,6 +7,7 @@ import { StyleSheet, withUnistyles } from "react-native-unistyles";
 import { HEADER_HEIGHT_MOBILE } from "../../constants";
 import { Header } from "../Header";
 import { StatusBar } from "../StatusBar";
+import { View } from "../View";
 
 export type ScreenProps = SafeAreaViewProps;
 

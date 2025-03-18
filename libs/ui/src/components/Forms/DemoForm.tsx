@@ -1,11 +1,11 @@
 import { Formik } from "formik";
-import { View } from "react-native";
 import { mq, StyleSheet } from "react-native-unistyles";
 
 import { formSchema } from "~/libs/utils/src/validation";
 
 import { Button } from "../Button";
 import { TextInput } from "../TextInput";
+import { View } from "../View";
 
 export const DemoForm = () => (
   <Formik

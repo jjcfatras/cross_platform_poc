@@ -2,8 +2,9 @@ import {
   type StatusBarProps as ExpoStatusBarProps,
   StatusBar as ExpoStatusBar,
 } from "expo-status-bar";
-import { View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
+
+import { View } from "../View";
 
 export type StatusBarProps = ExpoStatusBarProps & {
   type?: "filled" | "transparent";

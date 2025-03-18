@@ -1,5 +1,6 @@
-import { View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
+
+import { View } from "./View";
 
 export const Divider = () => <View style={styles.divider} />;
 

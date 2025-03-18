@@ -14,3 +14,4 @@ export * from "./StatusBar";
 export * from "./Text";
 export * from "./TextInput";
 export * from "./TextLink";
+export * from "./View";

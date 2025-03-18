@@ -4,13 +4,13 @@ import { useField } from "formik";
 import {
   type TextInputProps as RNTextInputProps,
   TextInput as RNTextInput,
-  View,
 } from "react-native";
 import { StyleSheet, useUnistyles } from "react-native-unistyles";
 
 import { isFieldError } from "~/libs/utils/src/validation";
 
 import { Text } from "./Text";
+import { View } from "./View";
 
 export type TextInputProps = RNTextInputProps & {
   name: string;

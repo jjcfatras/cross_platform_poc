@@ -1,8 +1,8 @@
-import { type ViewProps, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
 import { HEADER_HEIGHT_WEB } from "../../constants";
 import { Header } from "../Header";
+import { type ViewProps, View } from "../View";
 
 export type ScreenProps = ViewProps;
 

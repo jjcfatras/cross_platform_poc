@@ -1,7 +1,7 @@
-import { View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
 import { type TextProps, Text } from "../Text";
+import { View } from "../View";
 
 export type CardTitleProps = Omit<TextProps, "color" | "type">;
 
